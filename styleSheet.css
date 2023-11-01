@@ -1,0 +1,118 @@
+<@charset "UTF-8";>/*ここから先にCSSをかくのはNG*/
+
+
+h1{
+ text-align:center; 
+ font-size:30px; color:#A9533C; 
+ border-bottom:solid 5px #931E56;
+}
+
+/*display指定*/
+a{
+ display:block;
+ color:75C9E2;
+}
+
+.set{
+	width:1000px;
+	padding:20px;
+}
+
+.set ul{
+	margine:0px;
+	padding:10px;
+}
+
+.set ol{
+	margine:0px;
+	padding:10px;
+}
+	
+
+.set ul li{
+	margine:5px;
+	padding:5px;
+}
+
+.set ol li{
+	margine:5px;
+	padding:5px;
+}
+
+
+
+.design{     
+
+	border-bottom:solid 2px #BF0D52;
+	border-right:solid 40px #BF0D52;
+	 width:1000px;
+	height:30px;
+
+}
+
+.aspect{
+	position:fixed;
+	right:10px;
+	top:150px;
+	
+	margine:5px;
+	padding:5px;
+
+	width:25%;
+	background-color:#931E56;
+	color:#EDDA15;
+	text-align:center;
+	}
+	
+
+#nav ul {
+  list-style-type: none; /*箇条書きのポッチを消す*/
+  text-align:left /*左右中央寄せは親要素に対して指定*/
+}
+
+
+
+/* ↓id="nav"の中のulの中のliに対してCSSを適用*/
+#nav ul li { 
+  display: inline-block;/*inline-blockにします*/
+  /*width: 80px;/*幅も指定できる*/*/
+  padding: 10px 0;/*余白も指定できる*/
+  margin: 10px 0;/*余白も指定できる*/
+  vertical-align: middle;/*縦の表示位置も指定できる*/
+  background: #D8D4E9;/*背景を水色に*/
+  font-weight: bold;/*文字を太字に*/
+  color:#B11789; /*文字色を白に*/
+  box-shadow: 3px 3px 6px -2px #555,/*外側のぼかし指定*/
+  3px 3px 8px rgba(255,255,255,0.8) inset;/*内側のぼかし指定*/
+}
+
+table{table-layout:fixed}
+table th {/*table内のthに対して*/
+  padding: 10px;/*上下左右10pxずつ*/
+}
+
+table td {/*table内のtdに対して*/
+  padding: 10px 3px;/*上下3pxで左右10px*/
+  
+}
+
+#pic ul {
+  list-style-type: none; /*箇条書きのポッチを消す*/
+  text-align:left /*左右中央寄せは親要素に対して指定*/
+}
+
+
+
+/* ↓id="pic"の中のulの中のliに対してCSSを適用*/
+#pic ul li { 
+  display: inline-block;/*inline-blockにします*/
+  padding: 10px 10px;/*余白も指定できる*/
+  margin: 10px 0;/*余白も指定できる*/
+  vertical-align: middle;/*縦の表示位置も指定できる*/
+  background: #C8D4B4;/*背景を薄緑に*/
+  font-weight: bold;/*文字を太字に*/
+  color:#6C5EA5; /*文字色をしろに*/
+  box-shadow: 3px 3px 6px -2px #555,
+  3px 3px 8px rgba(255,255,255,0.8) inset;
+}
+

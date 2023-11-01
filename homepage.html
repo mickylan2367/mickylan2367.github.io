@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+
+
+<head>
+<meta charset="UTF-8">
+<title> hakodatenow </title>
+
+<style>
+body{
+ background: linear-gradient(to bottom, #DFB8C1, #C3AEC5 25%, #8CB8BE 50%, #94A2C2 75%, #A999BD);
+ margine:10px;
+ padding:10px;
+ font-family: 'Arial',YuGothic,'Yu Gothic','ヒラギノ角ゴ ProN W3','メイリオ',                'Meiryo';
+}
+
+h1{
+ text-align:center; 
+ font-size:30px; color:#A9533C; 
+ border-bottom:solid 5px #931E56;
+}
+</style>
+<!--このページは学習用。色は「配色のアイデア手帳P49 カクテル」を参照-->
+<!--スタイル(style)は外部CSSを読み込まないなら、ここに書く-->
+<link rel="stylesheet" href="styleSheet.css">
+
+</head>
+
+<body>
+
+<!--ページにはbodyの内容しか写らない-->
+
+<h1>
+<span style= "color:#931E56">大見出し</span>はh1で、一つのページで一回しか使わない
+</h1>
+
+<h2 class="design">
+参考にしたサイトや一覧
+</h2> 
+<p><a href="https://saruwakakun.com/html-css/basic/html">サルワカ</a>:超丁寧で分かりやすかったからおすすめ</p>
+<p><a href="https://html-coding.co.jp/annex/dictionary/html/frameset/">クロノドライブ</a>：タグ図鑑がある</p>
+<p><a href="http://www.246.ne.jp/~apricot/sabian/sabianfr.html">サビアンシンボル</a>:ホームページの仕組みを見る練習に良かった</p>
+<p><a href="https://www.sbcr.jp/product/4797393248/">配色のアイデア手帳</a>：色のセンスがない人におすすめ</p>
+
+
+<h2 class="design">
+小見出しはh2から。HTMLの基本
+</h2>
+
+<div class="set", style="background-color:#D9C5BF">
+ 
+<p>
+文章を書いて、段落を作るよ。ソースファイルは"Ctrl"+"U"で見られるよ。そちらも確認しながら見てみてください。
+</p>
+<ul>
+<li>"<>"に囲まれたものをタグという。</li>
+<li>改行ではbrを使う</li>
+<li>divとspanでまとまりごとにデザインを変えることができるらしい。同様のことが、classとid指定によってもできる。
+<br>タグ名 class="クラス名"
+<br>タグ名　id = "id名"等
+<br>id, classのデザイン指定はCSSにて。</li>
+
+<li>divはblock要素、spanはinline要素という。</li>
+<li>"a href="リンク先URL""でこうやって、<a href="http://www.246.ne.jp/~apricot/sabian/sabianfr.html">サビアンシンボルへのリンク</a>も作ることができる。</li>
+<li>"img src="画像リンク""で画像を張り付けることができる。</li>
+
+</ul>
+
+<h3>リストの書き方</h3>
+
+<p>ulを使うと、箇条書きになるよ</p>
+
+<ul>
+<li>一つ目の項目</li>
+<li>二つ目の項目</li>
+<li>三つ目の項目</li>
+</ul>
+
+<p>
+olを使うと、数字付の箇条書き
+</p>
+
+<ol>
+<li>一つ目の項目</li>
+<li>二つ目の項目</li>
+<li>三つ目の項目</li>
+</ol>
+</div>
+
+
+<h2 class="design">
+CSSの基本
+</h2>
+
+<div class="set", style="background-color:#C6B6D2">
+<ul>
+<li>"link rel="stylesheet" href="ファイル名.css""をheadの中に書いて、外部CSSを読み込むことができるよ。<br>それが一番わかりやすいかもしれない。</li>
+<li> "@import url("ファイル名.css");"と書けば、別の外部cssを読み込むことができる。UTF-8指定の後に書く。</li>
+<li>CSSの指定は、<span style="color:EDDA15;font-size:25px;border-bottom:double 2px red"><br>セレクタ(どこの){<br>プロパティ-(何を):値(どんなふうに)<br>}</span><br>変えるか、という指定をする。
+
+<br>セレクタはhtmlの各要素(p,body,h1など)
+<br>プロパティーはcolor(文字色)、font-size(文字の大きさ)、border(線)やbackground-color(背景色)とか。
+<br>値は具体てな色の指定など。</li>
+
+<li>"#id名{~}"でデザインidを指定できる。
+<br>htmlではidデザインは一回しか適用できないけど、CSSflileの方で"#id名,セレクタ1、セレクタ2,"のような形で複数指定できることをお忘れなく。
+<br>".class名{~}"でデザインクラスを指定できる。
+</li>
+
+<li>色指定は、カラーコードか色の名前でする。RGB指定もできるけど、正確にはRGB「A：透明度」まで一緒に指定</li>
+<li>processingと同じで、"セレクタ{text-align:left,centerやright}"と文字の表示場所、大きさはpx(そのままの大きさ)かem(現在の文字の大きさからの倍率)で指定可能</li>
+
+<li>CSSは基本的に　"インライン>head内のstyle>外部CSS"　の順番に優先される</li>
+<li>"border:solid(実線) 1px(大きさ) black(色)"って感じで指定して線を引ける。<br>solidは実線、dottedは点線、dashedは破線、doubleは二重線指定
+<br>線を引く場所は、border-場所(top,bottom,right,left)という感じで一つずつ指定できる。
+</li>
+<li>CSSのコメントアウトはprocessingと全く同じ、"/**/"でできる。
+
+</ul>
+</div>
+
+
+
+<h2 class="design">
+CSSのデザインの仕方
+</h2>
+
+
+<!--やばいことに気が付いてしまった。
+  classとstyleを並列して書くときは、必ず,(カンマ)の後ろにインデント一つ分余白がないとclassが認識されない。-->
+
+
+<div class="set", style="background-color:#DBBDCC">
+<ul>
+<li>displayにはブロック要素(行)とインライン(inline)要素が存在する。
+<br>ブロック要素は例えば、h1,h2、pタグやdivなどのタグが挙げられる。幅や高さを指定することができる。上下の余白も指定できる。ただし、テキスト位置(text-align,vertical-align)は設定できない。
+<br>インライン要素は例えば、spanタグやimgタグのこと。インライン要素はブロック要素の中で使われることが多く、幅や高さを指定することはできない。上下の余白も設定できないが、テキスト位置は指定することができる。
+</li>
+
+<li>上下の余白の指定の仕方。文章に使えば行間指示になる。
+<ol>
+<li>要素に対する内側の余白をpadding,</li>
+<li>要素に対する外側の余白をmargine</li>
+</ol>
+として指定する。</li>
+
+<li>各要素には、block要素・inline要素・inline-block要素か、デフォルトが決まっていて、文の途中でリンク先を張り付けたりして互換することができる。</li>
+
+<li>CSSでは各要素のポジションを決められる。
+<br>(セレクタ名)position:形態(static,relative,absolute,fixed);
+<br>基準(top,left,right,bottom):px指定
+<br>で決められる。
+<br>横の目次はfixedを用いている。fixedは画面に対する位置を指定する。
+</li>
+<li>スマホなどで画面を見る場合、パソコン用のサイズ指定では画面が大きすぎたり小さすぎたり何かと不便なこともある。この時、max-widthやmin-widthなどで大きさの最大値を指定しておくと、より見やすくすることができる。widthは横サイズの指定であり、maxやminを指定したことによってデザインが崩れてしまう場合には、height指定をauto(自動)にしておくと、縦横のサイズ感が保たれる。らしい。
+</li>
+<li>
+fontを変える方法は、<a href="https://saruwakakun.com/html-css/basic/font-family-how-to">サルワカ氏のこの記事</a>を参照したよ
+<br>fontは、font-familiyというセレクタで'font名'を指定していく。
+<br>font-family:'font1','font2','font3'....
+<br>fontは使っているosが違うと使えるfontが異なるなど、色々面倒が起こるので通常何個か一度に指定しておく。fontは、前に書いてあるfontから採用されていく。英語のfontは日本語を表現することができないので、前に英語のfont,後ろに日本語のfontを指定する。
+</li>
+<li>bodyタグのbackgroundをグラデーションに変える方法は、<a href="https://saruwakakun.com/html-css/basic/linear-radial-gradient">サルワカ氏のこの記事</a>を参照したよ。</li>
+
+
+</ul>
+</div>
+
+<h2 class="design">表の作り方や、写真の挿入の参考</h2>
+
+<div class="set", style="background-color:#CC9AA8">
+<h3>表</h3>
+<p><a href="https://saruwakakun.com/html-css/basic/table#section7">サルワカ氏の記事</a>
+<br>:基礎的なことが丁寧に説明されていると思う</p>
+<p><a href="https://allabout.co.jp/gm/gc/24011/">セル幅調整参考記事１</a></p>
+<p><a href="https://www.dspt.net/html_tag/006_data/014.html">セル幅調整参考記事２</a></p>
+<p>実はちょっとセル幅調整にてこずった。width:100pxみたいな感じじゃなくて、親要素tableのwidthに対する%でセル幅を調整し、書き方もwidth="何とか％"で少しstyle指定とは違うから。</p>
+</div>
+
+<!--横についてる目次-->
+<div class="aspect">
+<p><a style="text-decoration:none; color:#EDDA15", href="index.html">下宿暮らしに戻る</a></p>
+<p><a style="text-decoration:none; color:#EDDA15", href="mail.html">メールフォーム(未完成)</a></p>
+</div>
+
+</body>
+
+
+</html>
