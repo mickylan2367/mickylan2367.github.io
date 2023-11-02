@@ -59,9 +59,9 @@ a{
 	padding:5px;
 
 	width:10%;
-	background-color:rgba(225, 152, 173, 0.5);
-	color:rgba(217, 212, 234, 0.9);
+	background-color:rgba(125, 91, 131, 0.7);
 	text-align:center;
+  font-weight: bold;/*文字を太字に*/
 	}
 	
 
