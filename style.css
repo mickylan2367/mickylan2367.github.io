@@ -1,0 +1,124 @@
+<@charset "UTF-8";>/*ここから先にCSSをかくのはNG*/
+
+
+body{
+ margin:10px;
+ padding:10px;
+ font-family: 'Arial',YuGothic,'Yu Gothic','ヒラギノ角ゴ ProN W3','メイリオ',                'Meiryo';
+}
+
+
+h1{
+ text-align:center; 
+ font-size:30px; color:#A9533C; 
+ border-bottom:solid 5px #931E56;
+}
+
+h2{
+ text-align:center;
+ font-size:20px;
+}
+
+h3{
+ text-align:center;
+ font-size:18px;
+}
+
+p{
+ margin: 20px;
+ padding:10px;
+}
+
+
+
+#arthor{
+ block:inline;
+ text-align: center;
+ color:#3EA6B1
+ }
+
+#arthor ul{
+ list-style-type: none;
+ text-align: center;
+ }
+
+#arthor ul li{
+ display: inline-block;
+ padding: 50px 50px;
+ margin: 100px; 
+ width:200px;
+ border-radius:10px;
+ background-color:#F0D4E1;
+ text-align: center;
+ vertical-align: middle;
+ font-weight:bold;
+ box-shadow:2px 2px 4px #C2A2B6,
+ 4px 4px 2px #F7F4E5 inset;
+ 
+ }
+
+#deg ul{
+ list-style-type:none;
+ text-align: center;
+}
+
+#deg ul li{
+ display: inline-block;
+ padding: 50px;
+ margin: 50px;
+ width:20px;
+ border-radius:0.75em;
+ background-color:#F7F4E5;
+ vertical-align: middle;
+ color:#4863AD;
+ font-weight:bold;
+ box-shadow:2px 2px 4px #4863AD,
+ 2px 2px 3px #F0D4E1 inset;
+}
+
+/*ここから先、パンくずリスト*/
+.breadcrumb {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.breadcrumb li {
+  display: inline;/*横に並ぶように*/
+  list-style: none;
+  font-weight: bold;/*太字*/
+}
+
+.breadcrumb li:after {
+  /* >を表示*/
+  content: '>';
+  padding: 0 0.2em;
+  color: #555;
+}
+
+.breadcrumb li:last-child:after {
+  content: '';
+}
+
+
+.breadcrumb li a {
+  text-decoration: none;
+  color: gray;
+}
+
+
+.breadcrumb li:first-child a:before {
+  /*家アイコン*/
+  font-family: FontAwesome;
+  content: '\f015';
+  font-weight: normal;
+  font-size: 1.1em;
+  color: #2e7fea;
+}
+
+.breadcrumb li a:hover {
+ /*マウスを近づけると、どうなるか・下線が現れる機能*/
+  color:red;
+  text-decoration: underline;
+}
+
