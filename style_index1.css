@@ -1,4 +1,4 @@
-<@charset "UTF-8";>/*ここから先にCSSをかくのはNG*/
+@charset "UTF-8";/*ここから先にCSSをかくのはNG*/
 
 
 h1{
@@ -19,23 +19,23 @@ a{
 }
 
 .set ul{
-	margine:0px;
+	margin:0px;
 	padding:10px;
 }
 
 .set ol{
-	margine:0px;
+	margin:0px;
 	padding:10px;
 }
 	
 
 .set ul li{
-	margine:5px;
+	margin:5px;
 	padding:5px;
 }
 
 .set ol li{
-	margine:5px;
+	margin:5px;
 	padding:5px;
 }
 
@@ -45,7 +45,7 @@ a{
 
 	border-bottom:solid 2px #BF0D52;
 	border-right:solid 40px #BF0D52;
-	 width:1000px;
+	width:1000px;
 	height:30px;
 
 }
@@ -55,7 +55,7 @@ a{
 	right:10px;
 	top:150px;
 	
-	margine:5px;
+	margin:5px;
 	padding:5px;
 
 	width:10%;
@@ -75,8 +75,8 @@ a{
 /* ↓id="nav"の中のulの中のliに対してCSSを適用*/
 #nav ul li { 
   display: inline-block;/*inline-blockにします*/
-  /*width: 80px;/*幅も指定できる*/*/
-  padding: 10px 0;/*余白も指定できる*/
+  /*width: 80px;/*幅も指定できる*/
+  padding:10px 0;/*余白も指定できる*/
   margin: 10px 0;/*余白も指定できる*/
   vertical-align: middle;/*縦の表示位置も指定できる*/
   background: #D8D4E9;/*背景を水色に*/

@@ -1,0 +1,31 @@
+<!ELEMENT report (date,executiondate*,course,studentid,name,class,group,title,abstract,evaluation,keywords,procedures,references,comment)>
+
+<!ELEMENT date (#PCDATA)>
+<!ELEMENT executiondate (#PCDATA)>
+<!ELEMENT course (#PCDATA)>
+<!ELEMENT studentid (#PCDATA)>
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT class (#PCDATA)>
+<!ELEMENT group (#PCDATA)>
+<!ELEMENT title (#PCDATA)>
+<!ELEMENT abstract (#PCDATA)>
+<!ELEMENT evaluation (#PCDATA)>
+
+<!ELEMENT keywords (keyword*)>
+
+<!ELEMENT keyword (#PCDATA)>
+<!ATTLIST keyword type (command|word|file|directory) #REQUIRED>
+<!ATTLIST keyword name CDATA #REQUIRED>
+
+<!ELEMENT references (refitem*)>
+<!ELEMENT refitem (#PCDATA)>
+<!ELEMENT comment (#PCDATA)>
+
+<!ELEMENT procedures (#PCDATA|proc)*>
+<!ELEMENT proc (#PCDATA|command|word|file|directory)*>
+<!ATTLIST proc title CDATA #REQUIRED>
+
+<!ELEMENT command (#PCDATA)>
+<!ELEMENT word (#PCDATA)>
+<!ELEMENT file (#PCDATA)>
+<!ELEMENT directory (#PCDATA)>

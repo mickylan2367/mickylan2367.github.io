@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding='Shift_JIS'?>
+<!DOCTYPE report SYSTEM "sysadminreport2009.dtd">
+<?xml-stylesheet href="sysadminreport2009.xsl" type="text/xsl"?>
+<report>
+
+<!-- レポート提出日 -->
+<date>2006/4/??</date>
+
+<!-- 演習を実施する/した日(レポート提出日と同じであれば省略可) -->
+<executiondate>2006/4/??</executiondate>
+
+<!-- 自分の所属コース,学籍番号,氏名,クラス,班番号 -->
+<course>複雑系科学コース</course>
+<studentid>c1104999</studentid>
+<name>ほげほげ</name>
+<class>A</class>
+<group>3</group>
+
+<!-- 課題名を書く -->
+<title>Linuxのインストール、およびユーザアカウントの作成</title>
+
+<!-- 出された課題の目的や中心となるテーマを数行程度で -->
+<abstract>
+課題1.○○○
+課題2.□□□
+発展課題.△△△
+</abstract>
+
+<!-- 課題が達成できたかどうかを、作業した本人の立場でなく、客観的にはどのように判定できるかを記述 -->
+<evaluation>
+課題1.ハードディスクからLinuxが起動すること
+課題2.□□□
+発展課題.△△△
+</evaluation>
+
+<!-- 課題で必要となるコマンド、関連する概念や用語、操作対象となるファイルやディレクトリを記述 -->
+<keywords>
+
+  <!-- コマンドの場合はtype属性に"command"を指定し、name属性にコマンド名を書く -->
+  <keyword type="command" name="ls">
+  ファイル一覧を表示する。オプションに-lを付けるとファイルサイズや更新日時などの詳細も表示される。
+  </keyword>
+
+  <!-- 概念や用語の場合はtype属性に"word"を指定 -->
+  <keyword type="word" name="インストーラ">
+  ソフトウェアのインストールを補助するプログラム
+  </keyword>
+
+  <!-- ディレクトリの場合はtype属性に"directory"を指定 -->
+  <keyword type="directory" name="/etc">
+  システム管理に重要なディレクトリ。各種設定ファイル等が格納されている。
+  </keyword>
+
+  <!-- ファイルの場合はtype属性に"file"を指定 -->
+  <keyword type="file" name="/etc/passwd">
+  登録されているユーザアカウント情報が格納されているファイル
+  </keyword>
+</keywords>
+
+<!-- 課題ごとに必要とされる作業手順を記載 -->
+<procedures>
+
+<!-- 個々の課題をこなすための作業手順を、順を追って説明する。-->
+<!-- 説明の中に上のkeywordsで記述したコマンド、ファイルやディレクトリ、用語が出てくる場合は、それぞれcommandタグ、fileタグとdirectoryタグ、wordタグで囲むこと -->
+<proc title="Linuxのインストール">
+1. ハードディスク、SCSIターミネータ、SCSIケーブル、RedHatのCD-ROM等を準備する
+2. ディスプレイ、ハードディスク、本体の順に電源を入れ、CD-ROMを入れる。
+3. RedHatの<word>インストーラ</word>の初期画面が出たらEnterキーを押す。
+4.
+5.
+...
+</proc>
+
+<proc title="CD-ROMからの情報の読み出し">
+...<command>ls</command>コマンドで...
+</proc>
+
+<proc title="ユーザアカウントの作成">
+...<file>/etc/passwd</file>ファイルに...
+</proc>
+
+</procedures>
+
+<!-- レポート作成に当たって参考にしたものをまとめて記載 -->
+<references>
+
+  <!-- 書籍を参考にした場合は、書籍名、著者名、出版社名、主に参考した章の番号やページの範囲を記述する -->
+  <refitem>
+  RedHat Linux サバイバルガイド、Mohammed J. Kabir著、ソフトバンクパブリッシング、Chapter 1(3～18ページ)
+  </refitem>
+
+  <!-- Webページを参考にした場合は、
+  ページの名前、ページの作者あるいは管理している人や組織、URL、参考にした範囲や箇所を記述する -->
+  <refitem>
+  RedHat Linux 9のサポート情報、redhat JAPAN、http://www.redhat.co.jp/support/9/、マニュアル・ドキュメントにリンクされているPDF全般
+  </refitem>
+
+  <!-- 他の人と協力して計画書を作成した場合には、
+  内容が似ていても、その人のレポートを不正にコピーしていないことを、学籍番号、氏名込みで明記する -->
+  <refitem>
+  c1100000の○○さんの計画書を一部参考にさせてもらいましたが、内容のコピーはしていません。
+  </refitem>
+
+</references>
+
+<!-- レポート作成に関連して、何かコメントがあれば記入 -->
+<comment>
+事前にレポートの手順書を作ることで演習がスムーズにいくが、手順書が必ずしも正しいとは言えないので、途中で詰まることがあった。
+</comment>
+</report>

@@ -1,6 +1,6 @@
-<@charset "UTF-8";>/*ここから先にCSSをかくのはNG*/
+@charset "UTF-8";
 
-
+/*ここから先にCSSをかくのはNG*/
 body{
  margin:10px;
  padding:10px;
@@ -12,11 +12,14 @@ h1{
  text-align:center; 
  font-size:30px; color:#A9533C; 
  border-bottom:solid 5px #931E56;
+ padding:10px;
 }
 
 h2{
  text-align:center;
- font-size:20px;
+ font-size:25px;
+ margin: 0;
+ padding:0;
 }
 
 h3{
@@ -29,10 +32,94 @@ p{
  padding:10px;
 }
 
+a{
+  text-decoration: none;
+}
+
+a:hover{
+  color:red;
+  text-decoration: underline;
+}
+
+.caption{
+  display:block;
+  padding:0px 0;
+  margin:0 0;
+}
+
+.author{
+  margin-top: 0%;
+  margin-left: 8px;
+  margin-right: 8px;
+  padding-top: 0px;
+  padding-bottom: 30px;
+  background-color:rgba(241,249,248,0.7)
+}
+
+#author_caption{
+  width:70%;
+  display:block;
+  /* justify-content: center; */
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.motto{
+  margin-top: 5px;
+  margin-bottom: 20px;
+  margin-left: 8px;
+  margin-right: 8px;
+  padding-top: 6px;
+  padding-bottom: 0px;
+  background-color:rgba(205,215,234,0.6)
+}
+
+#motto{
+  width:60%;
+  display:block;
+  /* justify-content: center; */
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
 
 
-#arthor{
- block:inline;
+
+/* 7-1-32 ボタンを虹色にする */
+.gradient4{
+  /* ボタンの形状 */
+  display:inline-block;
+  padding:5px 30px;
+  border-radius:20px;
+  text-decoration:none;
+  border:1px solid #fa6c9f;
+  color:#fa6c9f;
+  outline:none;
+
+  /* アニメーションの設定 */
+  transition:all 0.4s ease-out;
+}
+
+.gradient4:hover{
+  border-color: transparent;
+  color:#fff;
+  background: linear-gradient(270deg, #fa6c9f 0%, #ffe140 50%, #ff357f 100%);
+  background-size:200% auto;
+  background-position:right center;
+
+  /* ボックスの影 */
+  box-shadow: 0 5px 10px rgba(250, 108, 159, 0.4);
+  text-decoration: none;
+}
+
+
+
+/* どこで使ったのか分からないcss */
+/* #arthor{
+ display:inline;
  text-align: center;
  color:#3EA6B1
  }
@@ -55,7 +142,7 @@ p{
  box-shadow:2px 2px 4px #C2A2B6,
  4px 4px 2px #F7F4E5 inset;
  
- }
+ } */
 
 #deg ul{
  list-style-type:none;
@@ -121,4 +208,6 @@ p{
   color:red;
   text-decoration: underline;
 }
+
+
 

@@ -1,0 +1,73 @@
+ 
+ <!--  6.2.3 動きを実現する仕組み > 
+    MuuriというJavaScriptを使用して段組みと画像の並べ替えを行う。
+    また画像をクリックして拡大するために、fancyboxというJavascriptを使う
+-->
+<!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css"> -->
+ 
+ <ul class="sort-btn">
+        <li>
+            <dl>
+                <dt>All</dt>
+            <dd>
+                <ul>
+                    <li class="all active">全て</li>
+                </ul>
+            </dd>
+            </dl>
+        </li>
+        <li>
+            <dl>
+                <dt>Color</dt>
+                <dd>
+                    <ul>
+                        <li class="color01">Color1</li>
+                        <li class="color02">Color2</li>
+                        <li class="color03">Color3</li>
+                    </ul>
+                </dd>
+            </dl>
+        </li>
+        <li>
+            <dl>
+                <dt>Category</dt>
+                <dd>
+                    <ul>
+                        <li class="cat01">カテゴリ1</li>
+                        <li class="cat02">カテゴリ2</li>
+                        <li class="cat03">カテゴリ3</li>
+                    </ul>
+                </dd>
+            </dl>
+        </li>
+    </ul>
+
+    <ul class="grid">
+        <li class="item cat01 color01">
+            <div class="item-content">
+                <a href="pics/aquarius.jpg" data-fancybox="group" data-caption="キャプション">
+                    <img src="pics/aquarius.jpg" alt="">
+                </a>
+            </div>
+        </li>
+
+        <li class="item cat01 cat02 color01">
+            <div class="item-content">
+                <a href="pics/aquarius.jpg" data-fancybox="group" data-caption="キャプション">
+                    <img src="pics/aquarius.jpg" alt="">
+                </a>
+            </div>
+        </li>
+
+        <li class="item cat03 color02">
+            <div class="item-content">
+                <a href="pics/aquarius.jpg" data-fancybox="group" data-caption="あクエリ">
+                    <img src="pics/aquarius.jpg" alt="">
+                </a>
+            </div>
+        </li>
+    </ul>
+
+<!-- <script src="https://unpkg.com/web-animations-js@2.3.2/web-animations.min.js"></script> Muuriで必要なjavascript -->
+<!-- <script src="https://unpkg.com/muuri@0.8.0/dist/muuri.min/js"></script> muuriのJavascript -->
+<!-- <script src="https://cdn.jsdelivr.net/gh.fancyapps/fancybox@3.5.7/dist.jquery.fancybox.min.js"></script>fancyのjavascript -->

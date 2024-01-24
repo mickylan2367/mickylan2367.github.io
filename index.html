@@ -5,13 +5,15 @@
 body{
     background-image: url(books.jfif);
     background-color:#F5E6DD;
+    background-size:  cover;
 }
 </style>
 <head>
 <meta charset="UTF-8">
 <title>魔女の部屋</title>
 
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="style_index.css">
+<!-- <link rel="stylesheet" href="styleSheet.css"> -->
 </head>
 
 <body>
@@ -23,7 +25,11 @@ body{
 <p></p>
 <h2>目次</h2>
 
-<h3><a href="index1.html">日記</a></h3>
+<h3>
+    <a href="#" target="index1_utf8.html" class="gradient4">
+            日記
+    </a>
+</h3>
     <p align="center">
         機会があればこれから増やします。
     </p>
@@ -49,81 +55,69 @@ body{
         あまり他人に自分の趣味を話すのは得意じゃないので、こういうところで書くほうが自分らしいかなって。
     </p>
 
-<div class="set", style="background-color:rgba(241,249,248,0.7)">
+<div class="author">
     <p></p>
     <h3 class="design">自己紹介</h3>
+    <p align="center" style="size: 10px;">Mickylan2367(Mika Kobayashi)</p>
     <p align="center">
         <img style="height:200px", src="homePicture/mikan.png">
+        <span class="caption">普段使用しているアイコン</span>
     </p>
-    <p align="center" style="size: 10px;">Mickylan2367(Mika Kobayashi)</p>
-    <p align="center" style="clear: both;">
-        公立はこだて未来大学複雑系コース(在学中)<br>
-        趣味はアニメ、読書、Youtube、占い。<br>
-        タロットでも西洋占星術でも好きだけど、占星術の方が得意。
-        魔女として自立するためにプログラミングでも学んでおけばいいんじゃないかと未来大に来たものの、課題に追いかけまわされたり、持ち前の根暗スキルが発動して真夜中に暗黒のツイートをぶちまけたり、色々やらかしている。対人問題にとっても悩まされる(頑固なので)星並びを持つ。
-        でもAIや科学技術と占星術って本質的には似ているよね。みんな未来のことがりたいんでしょ（っていうかんじの自他ともに認める面倒くさい性格）
-        魔女見習いとしてこれからも占いの研究に人生をささげる予定(予定は常に未定だけど)。
-        
-        西洋占星術研究仲間、大募集中だけど大体占いするような人間というものは根暗だし、そう占星術の大研究家もおっしゃられているので期待はしない。
-        繊細な人間なので、私が変なことを言ってもガン無視してくれるタイプの、あんまり他人に興味がなさそうな人間は好き。<br>
-        でも無視されるのは嫌い。（あまのじゃく）あと、魔女狩りと孤立は嫌あああ
+    <p align="center">
+        <img style="height:200px", src="homePicture/girl.png">
+        <span class="caption">
+            イメージ（こんなに美人ではありません）
+        </span>
     </p>
+    <div id="author_caption">
+        <p align="center" style="clear: both;">
+            公立はこだて未来大学複雑系コース(在学中)<br>
+            趣味はアニメ、読書、占い。<br>
+            タロットでも西洋占星術でも好きだけど、占星術の方が得意。
+            魔女として自立するためにプログラミングでも学んでおけばいいんじゃないかと未来大に来たものの、課題に追いかけまわされたり、持ち前の根暗スキルが発動して真夜中に暗黒のツイートをぶちまけたり、色々やらかしている。対人問題にとっても悩まされる(頑固なので)星並びを持つ。
+            でもAIや科学技術と占星術って本質的には似ているよね。みんな未来のことがりたいんでしょ（っていうかんじの自他ともに認める面倒くさい性格）
+            魔女見習いとしてこれからも占いの研究に人生をささげる予定(予定は常に未定だけど)。
+            
+            西洋占星術研究仲間、大募集中だけど大体占いするような人間というものは根暗だし、そう占星術の大研究家もおっしゃられているので期待はしない。
+            繊細な人間なので、私が変なことを言ってもガン無視してくれるタイプの、あんまり他人に興味がなさそうな人間は好き。<br>
+            でも無視されるのは嫌い。（あまのじゃく）あと、魔女狩りと孤立は嫌あああ<br>
+            ちなみに、「本を読んでいるメガネをかけたショートカットの女の子」というプロンプトで<br>
+            stable diffusionに出してもらいました。
+        </p>
+    </div>
+</div>
+    
+<div class="motto">
+    <h3>座右の銘 Motto</h3>
+    <div id="motto">
+        <h4 align="center">THE SERENITY PRAYER</h4>
+        <p align="center">
+            O God, give us<br>
+            神よ、どうか私たちに<br>
+            serenity to accept what cannot be changed,<br>
+            変えられぬものを受け入れる静けさと<br>
+            courage to change what should be changed,<br>
+            変えるものを変える小さな勇気と<br>
+            and wisdom to distinguish the one from the other.<br>
+            それらの違いを見抜く智慧をお与えください。<br>
+        </p>
     </div>
     
-    <div class="set", style="background-color:rgba(205,215,234,0.6)">
-    <p></p>
-    <h4 align="center">THE SERENITY PRAYER</h4>
-    <p align="center">
-    O God, give us<br>
-    神よ、どうか私たちに<br>
-    serenity to accept what cannot be changed,<br>
-    変えられぬものを受け入れる静けさと<br>
-    courage to change what should be changed,<br>
-    変えるものを変える小さな勇気と<br>
-    and wisdom to distinguish the one from the other.<br>
-    それらの違いを見抜く智慧をお与えください。<br>
-    </p>
-
-    <h4 align="center">アクシズ教（このすば）のありがたい教え</h4>
-    <p align="center">
-        アクシズ教徒はやればできる、できる子たちなのだから。<br>
-        うまくいかなくてもそれはあなたのせいじゃない（上手くいかないのは世間が悪い）<br>
-        逃げていい、逃げることは負けじゃない、逃げるが勝ちという言葉があるのだから。<br>
-        迷った末に出した答えはどちらを選んでも後悔するもの。どうせ後悔するのなら、今が楽ちんな方を選びなさい<br>
-        汝老後を恐れるなかれ。未来のあなたが笑っているかそれは神ですらもわからない。なら今だけでも笑いなさい!<br>
-        エリスの胸はぱっと入り。（嫉妬は意味がないことなのです。）<br>
-    </p>
+    <div id="motto">
+        <h4 align="center">アクシズ教（このすば）のありがたい教え</h4>
+        <p align="center">
+            アクシズ教徒はやればできる、できる子たちなのだから。<br>
+            うまくいかなくてもそれはあなたのせいじゃない（上手くいかないのは世間が悪い）<br>
+            逃げていい、逃げることは負けじゃない、逃げるが勝ちという言葉があるのだから。<br>
+            迷った末に出した答えはどちらを選んでも後悔するもの。<br>
+            どうせ後悔するのなら、今が楽ちんな方を選びなさい<br>
+            汝老後を恐れるなかれ。<br>
+            未来のあなたが笑っているかそれは神ですらもわからない。<br>
+            なら今だけでも笑いなさい!<br>
+            エリスの胸はぱっと入り。（嫉妬は意味がないことなのです。）<br>
+        </p>
     </div>
-    
-    <div class="set", style="background-color:rgba(254, 222, 132,0.4)">
-    <p>その他もろもろ。
-        <ul>
-          <li>
-            射手座。逃げ癖あり。資本主義とは違う意味で真の自由主義者。
-          </li>
-          <li>
-            アスクレピウス（蛇遣い座の医者神）。他人にも自分にも激甘。
-          </li>
-          <li>
-            天王星強め。(ヘリオ水星天王星スクエア)。変人...天才ではないのが少し残念。
-          </li>
-          <li>
-            エニアグラムはタイプ9(7ハウス月牡牛土星合。) 対人ストレス耐性がありません。めっちゃ臆病です。
-          </li>
-          <li>
-              このプログラムはまだ開発中で、いつかちゃんとしたdjangoを使ったwebアプリケーションにしたいなあって思ってます。<br>
-              （自分用....に開発するモチベーションしかないのかしら（笑））
-          </li>
-          <li>
-              ちなみに、アクシズ教徒（この素晴らしい世界に祝福を!）ではありませんが、生きるモットーにしています。<br>
-              好きな言葉は二ーバーの祈り。
-          </li>
-        </ul>
-    </p>
 </div>
-</div>
-
-
 
 </body>
 </html>

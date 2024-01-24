@@ -1,36 +1,97 @@
 <!DOCTYPE html>
 <html>
-<style>
-</style>
+    <!-- 参考にしたカラーはP202 秋の風物 Recipe80 -->
+    <style>
+        h1{
+            text-align:center; 
+            font-size:30px; color:#EADBBB; 
+            border-bottom:solid 5px #931E56;
+        }
+        body{
+            /* background-image: url(../books.jfif); */
+            background-color:rgba(186, 80, 90, 0.8);
+        }
+    </style>
 <head>
 <meta charset="UTF-8">
 <title>魔女の部屋</title>
 
-<!-- cssで静的デザインんを記述 -->
-<link rel="stylesheet" href="style413.css"> 
+<!-- 6.1 Vegas Backgroung SlideShowのCSS -->
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/vegas/2.4.4/vegas.min.css">
+<!-- 6.2.6 ギャラリー Modaalモーダルウィンドウを実現するJsライブラリ-->
+<link rel="styesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/Modaal/0.4.4/css/modaal.min.css">
+
+<!-- cssで静的デザインを記述 -->
+<link rel="stylesheet" href="style_book.css"> 
 </head>
 
 <body>
     <div id="splash">
-        <p align="center">hello!</p>
         <div id="splash_text"></div>
         <div class = "loader_cover loader_cover-up"></div> 
         <div class ="loader_cover loader_cover-down"></div>
         <!-- splash -->
     </div>
-
-    <div id="container">
-        <p>ローディング後、この画面が見えます</p>
-        <img src="../stars/pics/julia.png">
-        <!-- container -->
-    </div>
-
     
+    <h1>
+        魔女の部屋
+    </h1>
+
+    <div id="slider">
+    <!--slider--> </div>
+
+    <ul class="gallery">
+        <!-- 表示させたいエリアのID名を指定する -->
+        <li>
+            <a href="#gallery-1" class="gallery-list">
+                <img src="pics/aquarius.jpg" alt="" width="100%" align="center">
+            </a>
+        </li>
+        <li>
+            <a href="#gallery-2" class="gallery-list">
+                <img src="pics/aquarius.jpg" alt="" width="100%" align="center">
+            </a>
+        </li>
+    </ul>
+
+    <section id="gallery-1" class="hide-area">
+        <p>
+            <img src="pics/aquarius.jpg" alt="" width="280px" height="150px">
+            <span class="caption">水瓶座</span>
+        </p>
+        <p>
+            <img src="pics/libra.jpg" alt="" width="280px" height="150px">
+            <span class="caption">天秤座</span>
+        </p>
+        <p>
+            <img src="pics/scorpio.jpg" alt="" width="280px" height="150px">
+            <span class="caption">蠍座</span>
+        </p>
+    </section>
+
+    <section id="gallery-2" class="hide-area">
+        <p>
+            <img src="pics/picese.jpg" alt="" width="280px" height="150px">
+            <span class="caption">魚座</span>
+        </p>
+        <p>
+            <img src="pics/libra.jpg" alt="" width="280px" height="150px">
+            <span class="caption">天秤座</span>
+        </p>
+        <p>
+            <img src="pics/scorpio.jpg" alt="" width="280px" height="150px">
+            <span class="caption">蠍座</span>
+        </p>
+    </section>
+
     <!--  jquery -->
     <!-- jqueryはJavaScripのライブ蟻 -->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     <!-- プラグインのJavaScript -->
     <script src="https://rawgit.com/kimmobrunfeldt/progressbar.js/master/dist/progressbar.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vegas/2.4.4/vegas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Modaal/0.4.4/js/modaal.min.js"></script>
+    <!-- IE11用対策？ -->
     <!-- 自作のJavasvipt -->
     <script src="js/script.js"></script>
 </body>
