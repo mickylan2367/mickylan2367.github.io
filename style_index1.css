@@ -23,15 +23,14 @@ a{
 	padding:10px;
 }
 
-.set ol{
-	margin:0px;
-	padding:10px;
-}
-	
-
 .set ul li{
 	margin:5px;
 	padding:5px;
+}
+
+.set ol{
+	margin:0px;
+	padding:10px;
 }
 
 .set ol li{
@@ -76,7 +75,7 @@ a{
 #nav ul li { 
   display: inline-block;/*inline-blockにします*/
   /*width: 80px;/*幅も指定できる*/
-  padding:10px 0;/*余白も指定できる*/
+  padding:10px 10px;/*余白も指定できる*/
   margin: 10px 0;/*余白も指定できる*/
   vertical-align: middle;/*縦の表示位置も指定できる*/
   background: #D8D4E9;/*背景を水色に*/
@@ -84,6 +83,7 @@ a{
   color:#B11789; /*文字色を白に*/
   box-shadow: 3px 3px 6px -2px #555,/*外側のぼかし指定*/
   3px 3px 8px rgba(255,255,255,0.8) inset;/*内側のぼかし指定*/
+  border-radius: 10px;
 }
 
 table{table-layout:fixed}
@@ -107,12 +107,22 @@ table td {/*table内のtdに対して*/
 #pic ul li { 
   display: inline-block;/*inline-blockにします*/
   padding: 10px 10px;/*余白も指定できる*/
-  margin: 10px 0;/*余白も指定できる*/
+  margin:10px 0;
   vertical-align: middle;/*縦の表示位置も指定できる*/
   background: #C8D4B4;/*背景を薄緑に*/
   font-weight: bold;/*文字を太字に*/
   color:#6C5EA5; /*文字色をしろに*/
   box-shadow: 3px 3px 6px -2px #555,
   3px 3px 8px rgba(255,255,255,0.8) inset;
+  border-radius: 10px;
+}
+
+#picsimg{
+  height:200px;
+  width:auto;
+  display: inline-block;
+  margin-right:auto;
+  margin-left: auto;
+  border-radius: 5%;
 }
 

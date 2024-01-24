@@ -43,6 +43,7 @@ a:hover{
 
 .caption{
   display:block;
+  text-align: center;
   padding:0px 0;
   margin:0 0;
 }
@@ -67,29 +68,39 @@ a:hover{
 
 .motto{
   margin-top: 5px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   margin-left: 8px;
   margin-right: 8px;
   padding-top: 6px;
-  padding-bottom: 0px;
+  padding-bottom: 5px;
   background-color:rgba(205,215,234,0.6)
 }
 
 #motto{
+  background-color: rgba(154, 119, 100, 0.8);
+  border-radius: 10px;
   width:60%;
   display:block;
   /* justify-content: center; */
   text-align: center;
   margin-left: auto;
   margin-right: auto;
+  padding-top:0.5px;
   padding-bottom: 0;
-  margin-bottom: 0;
+  margin-bottom: 10px;
 }
 
 
 
 /* 7-1-32 ボタンを虹色にする */
-.gradient4{
+/* ボタン周辺のdivクラス */
+.button{
+  background:transparent;
+  margin:0;
+  padding:15px 0;
+}
+/* 日記のボタン */
+.gradient_diary{
   /* ボタンの形状 */
   display:inline-block;
   padding:5px 30px;
@@ -103,7 +114,88 @@ a:hover{
   transition:all 0.4s ease-out;
 }
 
-.gradient4:hover{
+.gradient_diary:hover{
+  border-color: transparent;
+  color:#fff;
+  background: linear-gradient(270deg, #fa6c9f 0%, #ffe140 50%, #ff357f 100%);
+  background-size:200% auto;
+  background-position:right center;
+
+  /* ボックスの影 */
+  box-shadow: 0 5px 10px rgba(250, 108, 159, 0.4);
+  text-decoration: none;
+}
+
+/* 星回り */
+.gradient_star{
+  /* ボタンの形状 */
+  display:inline-block;
+  padding:5px 30px;
+  border-radius:20px;
+  text-decoration:none;
+  border:1px solid #fa6c9f;
+  color:#fa6c9f;
+  outline:none;
+
+  /* アニメーションの設定 */
+  transition:all 0.4s ease-out;
+}
+
+.gradient_star:hover{
+  border-color: transparent;
+  color:#fff;
+  background: linear-gradient(270deg, #fa6c9f 0%, #ffe140 50%, #ff357f 100%);
+  background-size:200% auto;
+  background-position:right center;
+
+  /* ボックスの影 */
+  box-shadow: 0 5px 10px rgba(250, 108, 159, 0.4);
+  text-decoration: none;
+}
+
+/* コーディング */
+.gradient_coding{
+  /* ボタンの形状 */
+  display:inline-block;
+  padding:5px 30px;
+  border-radius:20px;
+  text-decoration:none;
+  border:1px solid #fa6c9f;
+  color:#fa6c9f;
+  outline:none;
+
+  /* アニメーションの設定 */
+  transition:all 0.4s ease-out;
+}
+
+.gradient_coding:hover{
+  border-color: transparent;
+  color:#fff;
+  background: linear-gradient(270deg, #fa6c9f 0%, #ffe140 50%, #ff357f 100%);
+  background-size:200% auto;
+  background-position:right center;
+
+  /* ボックスの影 */
+  box-shadow: 0 5px 10px rgba(250, 108, 159, 0.4);
+  text-decoration: none;
+}
+
+/* 本 */
+.gradient_books{
+  /* ボタンの形状 */
+  display:inline-block;
+  padding:5px 30px;
+  border-radius:20px;
+  text-decoration:none;
+  border:1px solid #fa6c9f;
+  color:#fa6c9f;
+  outline:none;
+
+  /* アニメーションの設定 */
+  transition:all 0.4s ease-out;
+}
+
+.gradient_books:hover{
   border-color: transparent;
   color:#fff;
   background: linear-gradient(270deg, #fa6c9f 0%, #ffe140 50%, #ff357f 100%);
@@ -116,7 +208,60 @@ a:hover{
 }
 
 
+/* お問い合わせホーム */
+.gradient_form{
+  /* ボタンの形状 */
+  display:inline-block;
+  padding:5px 30px;
+  border-radius:20px;
+  text-decoration:none;
+  border:1px solid #fa6c9f;
+  color:#fa6c9f;
+  outline:none;
 
+  /* アニメーションの設定 */
+  transition:all 0.4s ease-out;
+}
+
+.gradient_form:hover{
+  border-color: transparent;
+  color:#fff;
+  background: linear-gradient(270deg, #fa6c9f 0%, #ffe140 50%, #ff357f 100%);
+  background-size:200% auto;
+  background-position:right center;
+
+  /* ボックスの影 */
+  box-shadow: 0 5px 10px rgba(250, 108, 159, 0.4);
+  text-decoration: none;
+}
+
+#aqua{
+  padding:0;
+  margin:0;
+  border:thick 5px aqua;
+  border-radius:5px;
+  border-color: aquamarine; 
+  width:200px;
+  height:auto
+}
+
+/* 
+アクア様をハートに切り抜くコード。
+.mask {
+  -webkit-clip-path: url(#svgPath);
+  clip-path: url(#svgPath);
+  padding:0;
+  margin:0;
+  border-width: thick;
+  border-radius:5px;
+  border-color: aquamarine;
+  width:200px;
+  height:auto;
+}
+.shape {
+  height:0;
+} 
+*/
 /* どこで使ったのか分からないcss */
 /* #arthor{
  display:inline;
