@@ -4,13 +4,13 @@
 body{
  margin:10px;
  padding:10px;
- font-family: 'Arial',YuGothic,'Yu Gothic','ヒラギノ角ゴ ProN W3','メイリオ',                'Meiryo';
+ font-family: 'Arial',YuGothic,'Yu Gothic','ヒラギノ角ゴ ProN W3','メイリオ','Meiryo';
 }
 
 
 h1{
  text-align:center; 
- font-size:30px; color:#A9533C; 
+ font-size:35px; color:#A9533C; 
  border-bottom:solid 5px #931E56;
  padding:10px;
 }
@@ -25,6 +25,11 @@ h2{
 h3{
  text-align:center;
  font-size:18px;
+}
+
+.h3_design{
+  margin:0;
+  padding:0;
 }
 
 p{
@@ -44,8 +49,19 @@ a:hover{
 .caption{
   display:block;
   text-align: center;
+  width:500px; /*50%にしちゃうと、ボタンの中の50%にしてしまう*/
   padding:0px 0;
   margin:0 0;
+}
+
+.index{
+  margin-top: 5px;
+  margin-left: 8px;
+  margin-right: 8px;
+  padding-top: 10px;
+  padding-bottom: 30px;
+  background-image: linear-gradient(to top, rgba(251, 194, 235, 0.5) 0%, rgba(166, 193, 238, 0.5) 100%);;
+  border-radius: 10px;
 }
 
 .author{
@@ -58,7 +74,7 @@ a:hover{
 }
 
 #author_caption{
-  width:70%;
+  width:62%;
   display:block;
   /* justify-content: center; */
   text-align: center;
@@ -73,11 +89,29 @@ a:hover{
   margin-right: 8px;
   padding-top: 6px;
   padding-bottom: 5px;
-  background-color:rgba(205,215,234,0.6)
+  /* background-color:rgba(205,215,234,0.6) */
+  background-image: linear-gradient(-225deg, rgba(105, 234, 203, 0.4) 0%, rgba(234, 204, 248, 0.4) 48%, rgba(102, 84, 241, 0.4) 100%);
 }
 
-#motto{
-  background-color: rgba(154, 119, 100, 0.8);
+#motto_adler{
+  background-image: linear-gradient(to top, #c79081 0%, #dfa579 100%);
+  border-radius: 10px;
+  width:60%;
+  display:block;
+  /* justify-content: center; */
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top:0.5px;
+  padding-bottom: 0;
+  margin-bottom: 10px;
+}
+
+#motto_aqua{
+  background: linear-gradient(-225deg, rgba(105, 234, 204, 0.5) 0%, rgba(234, 204, 248, 0.5) 48%, rgba(102, 84, 241, 0.5) 100%), url(stars/pics/watch.png);
+  border: solid 10px rgba(216,215,223,0.7);
+  color:aliceblue;
+  font-weight: 900;
   border-radius: 10px;
   width:60%;
   display:block;
@@ -98,6 +132,7 @@ a:hover{
   background:transparent;
   margin:0;
   padding:15px 0;
+  text-align: center;
 }
 /* 日記のボタン */
 .gradient_diary{
@@ -106,9 +141,10 @@ a:hover{
   padding:5px 30px;
   border-radius:20px;
   text-decoration:none;
-  border:1px solid #fa6c9f;
-  color:#fa6c9f;
+  border:1px solid #6c9bd2;
+  color:#fef4f4;
   outline:none;
+  background-image: linear-gradient(to top, #30cfd0 0%, #582893 100%);
 
   /* アニメーションの設定 */
   transition:all 0.4s ease-out;
@@ -117,7 +153,7 @@ a:hover{
 .gradient_diary:hover{
   border-color: transparent;
   color:#fff;
-  background: linear-gradient(270deg, #fa6c9f 0%, #ffe140 50%, #ff357f 100%);
+  background: linear-gradient(270deg, #b7282d 0%, #e94709 50%, #c82b55 100%);
   background-size:200% auto;
   background-position:right center;
 
@@ -133,8 +169,9 @@ a:hover{
   padding:5px 30px;
   border-radius:20px;
   text-decoration:none;
-  border:1px solid #fa6c9f;
-  color:#fa6c9f;
+  border:1px solid #fbd8b5;
+  color:#932e44;
+  background: linear-gradient(to bottom, #FFF, #FFC778 30%, #F89174 60%, #748af8);
   outline:none;
 
   /* アニメーションの設定 */
@@ -144,7 +181,7 @@ a:hover{
 .gradient_star:hover{
   border-color: transparent;
   color:#fff;
-  background: linear-gradient(270deg, #fa6c9f 0%, #ffe140 50%, #ff357f 100%);
+  background: linear-gradient(270deg, #932e44 0%, #ea5548 50%, #e9474d 100%);
   background-size:200% auto;
   background-position:right center;
 
@@ -160,8 +197,9 @@ a:hover{
   padding:5px 30px;
   border-radius:20px;
   text-decoration:none;
+  background: radial-gradient(#F13F79, #FFC778);
   border:1px solid #fa6c9f;
-  color:#fa6c9f;
+  color:#FFF;
   outline:none;
 
   /* アニメーションの設定 */
@@ -188,7 +226,8 @@ a:hover{
   border-radius:20px;
   text-decoration:none;
   border:1px solid #fa6c9f;
-  color:#fa6c9f;
+  background:linear-gradient(25deg, rgba(255, 0, 0, 0.4), rgba(0, 255, 0, 0.4)) ,url(books.jfif);
+  color:#fdeadf;
   outline:none;
 
   /* アニメーションの設定 */
@@ -197,8 +236,8 @@ a:hover{
 
 .gradient_books:hover{
   border-color: transparent;
-  color:#fff;
-  background: linear-gradient(270deg, #fa6c9f 0%, #ffe140 50%, #ff357f 100%);
+  color:#932e44;
+  background-image: linear-gradient(270deg, #fbc2eb 0%, #ffe140 50%, #a6c1ee 100%);
   background-size:200% auto;
   background-position:right center;
 
@@ -217,6 +256,7 @@ a:hover{
   text-decoration:none;
   border:1px solid #fa6c9f;
   color:#fa6c9f;
+  background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
   outline:none;
 
   /* アニメーションの設定 */
@@ -227,6 +267,35 @@ a:hover{
   border-color: transparent;
   color:#fff;
   background: linear-gradient(270deg, #fa6c9f 0%, #ffe140 50%, #ff357f 100%);
+  background-size:200% auto;
+  background-position:right center;
+
+  /* ボックスの影 */
+  box-shadow: 0 5px 10px rgba(250, 108, 159, 0.4);
+  text-decoration: none;
+}
+
+/* お問い合わせホーム */
+.gradient_pics{
+  /* ボタンの形状 */
+  display:inline-block;
+  padding:5px 30px;
+  border-radius:20px;
+  text-decoration:none;
+  border:1px solid #fa6c9f;
+  color:#fff;
+  outline:none;
+  background-image: linear-gradient(to right, #eea2a2 0%, #bbc1bf 19%, #57c6e1 42%, #b49fda 79%, #7ac5d8 100%);
+
+  /* アニメーションの設定 */
+  transition:all 0.4s ease-out;
+}
+
+.gradient_pics:hover{
+  border-color: transparent;
+  color:#fff;
+  /* background: linear-gradient(270deg, #fa6c9f 0%, #ffe140 50%, #ff357f 100%); */
+  background-image: linear-gradient(to top, #fcc5e4 0%, #fda34b 15%, #ff7882 35%, #c8699e 52%, #7046aa 71%, #0c1db8 87%, #020f75 100%);
   background-size:200% auto;
   background-position:right center;
 
@@ -263,7 +332,7 @@ a:hover{
 } 
 */
 /* どこで使ったのか分からないcss */
-/* #arthor{
+#arthor{
  display:inline;
  text-align: center;
  color:#3EA6B1
@@ -287,7 +356,7 @@ a:hover{
  box-shadow:2px 2px 4px #C2A2B6,
  4px 4px 2px #F7F4E5 inset;
  
- } */
+ }
 
 #deg ul{
  list-style-type:none;

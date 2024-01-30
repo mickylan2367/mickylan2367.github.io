@@ -1,0 +1,60 @@
+h1{
+    text-align:center; 
+    font-size:30px; color:#A9533C; 
+    border-bottom:solid 5px #931E56;
+    padding:10px;
+}
+
+.h2-title{
+    text-align:left;
+    font-size:25px;
+    border-bottom:solid 3px #931E56;
+    margin-right:19%;
+    margin-left:0px;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left:30px;
+    padding-top:0;
+    padding-bottom: 0;
+    padding-right: 0;
+}
+
+.h3-title{
+    text-align:left;
+    font-size:20px;
+    border-bottom:solid 3px #931E56;
+    margin-right:19%;
+    margin-left:0px;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left:30px;
+    padding-top:0;
+    padding-bottom: 0;
+    padding-right: 0;
+}
+
+.subblock{
+    display: block;
+    /* text-align: center; */
+    width:80%;
+    height:auto;
+    padding:20px 0px;
+    margin:10px 10px;
+    background-color: aliceblue;
+}
+
+/*目次*/
+.aspect{
+	position:fixed;
+	right:10px;
+	top:150px;
+	
+	margin:5px;
+	padding:5px;
+
+	width:15%;
+	background-color:rgba(125, 91, 131, 0.7);
+	text-align:center;
+    font-weight: bold;/*文字を太字に*/
+}
+

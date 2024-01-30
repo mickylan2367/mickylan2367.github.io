@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="javascriptの練習" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/Modaal/0.4.4/css/modaal.min.css">
+    <link rel="stylesheet" href="style963.css"> 
+    <style>
+    h1{
+        text-align:center; 
+        font-size:30px; color:#A9533C; 
+        border-bottom:solid 5px #931E56;
+        padding:10px;
+    }
+
+    .h2-title{
+        text-align:left;
+        font-size:25px;
+        border-bottom:solid 3px #931E56;
+        margin-right:19%;
+        margin-left:0px;
+        margin-top: 0;
+        margin-bottom: 0;
+        padding-left:30px;
+        padding-top:0;
+        padding-bottom: 0;
+        padding-right: 0;
+    }
+    </style>
+</head>
+<body>
+
+    <h1>Modaal.jsの使い方</h1>
+    <p>このページはモーダルウィンドウの使い方練習ページです。</p>
+
+    <h2 class="h2-title">テキストの場合</h2>
+    <ul class="info-list">
+        <li>
+            <a href="#info-1" class="info">
+                <dl>
+                    <dt>2021.5.12</dt>
+                    <dd>お知らせのタイトル</dd>
+                </dl>
+            </a>
+        </li>
+    </ul>
+
+    <section id="info-1" class="hide-area">
+        <h2 class="h2-title">お知らせ</h2>
+        <p>お知らせの内容が入ります</p>
+    </section>
+
+    <h2 class="h2-title">確認を促す場合</h2>
+    <div class="login">
+        <a href="#login" class="confirm">
+            <img src="pics/リラックマ.webp" width="30%">
+        </a>
+        <section class="caption">確認モーダル。リラックマをクリックしてね。</section>
+    </div>
+    <section id="login" class="hide-area"></section>
+
+    <h2 class="h2-title">画像の場合</h2>
+    <div id="gallery-img">
+        <section id="caption">画像をクリックしたら、拡大してみれるよ~~!</section>
+        <ul class="gallery-list">
+            <li>
+                <a href="pics/aquarius.jpg" class="gallery" data-group="gallery">
+                    <img src="pics/aquarius.jpg">
+                </a>
+            </li>
+            <li>
+                <a href="pics/libra.jpg" class="gallery" data-group="gallery">
+                    <img src="pics/libra.jpg">
+                </a>
+            </li>
+            <li>
+                <a href="pics/picese.jpg" class="gallery" data-group="gallery">
+                    <img src="pics/picese.jpg">
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <h2 class="h2-title">動画の場合（全画面表示）</h2>
+    <!-- モーダルウィンドウ -->
+    <!-- https://www.youtube.com/embed/Su5XaS0iclc?si=O3i9Q6etmc0bZOZH -->
+    <div class="character">
+        <a href="https://www.youtube.com/embed/Su5XaS0iclc?si=O3i9Q6etmc0bZOZH" class="video-open">
+        <img src="pics/あんずまろん.jpg" width="30%" height="auto">
+        </a>
+        <section class="caption">
+            あんずまろん(占い系Youtuber!)
+        </section>
+    </div>
+
+    <h2 class="h2-title">iframeの場合</h2>
+    <div class="character">
+        <a href="http://www.246.ne.jp/~apricot/sabian/sabianfr.html" class="iframe-open">
+        <img src="pics/my_sabian.png" width="30%" height="auto" style="border-radius: 5px;">
+        </a>
+        <section class="caption">
+            クリックすると、サビアンシンボルのサイトを閲覧できます。<br>
+            射手座19度をStable diffusionに出してもらいました。<br>
+            (prompt: "pelicans flying sky with their children above city")
+        </section>
+    </div>
+
+
+    <div class="aspect">
+        <p style="size:6px"><a style="text-decoration: none;color:rgba(217, 212, 234, 0.9);", href="coding_index.html">コーディングへ戻る</a></p>
+        <p style="size:6px"><a style="text-decoration: none;color:rgba(217, 212, 234, 0.9);", href="../index.html">ホームへ戻る</a></p>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Modaal/0.4.4/js/modaal.min.js"></script>
+    <script src="js/script963.js"></script>
+
+</body>
+</html>

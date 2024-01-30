@@ -75,3 +75,17 @@ $(".gallery-list").modaal({
         $('html').css('overflow-y', 'scroll');
     }
 });
+
+$(".video-open").modaal({
+    type:'video',
+    fullscreen:'true',
+    overlay_close:true,
+    background:'#28BFE7',
+    overlay_opacity:0.8,
+    before_open:function(){
+        $('html').css('overflow-y', 'hidden');
+    },
+    after_close:function(){
+        $('html').css('overflow-y', 'scroll');
+    }
+});

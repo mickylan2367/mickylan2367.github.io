@@ -64,12 +64,10 @@
 /* ここから6.2.6章 */
 .gallery{
     display:inline;
-    justify-content:space-evenly;
+    /* justify-content:space-evenly; */
 }
 
 .gallery li{
-    height:200%;
-    margin: 0 0px;
     padding-top:0px;
     padding-bottom:0.5px;
     list-style:none;
@@ -81,7 +79,9 @@ img{
     /* width:100%; */
     /* height:auto; */
     vertical-align:bottom;
-    margin: 0.5%;
+    margin-bottom:5px;
+    /* margin-right: auto;
+    margin-left: auto; */
     /* 画像の下にできる余白を削除 */
 }
 
@@ -93,7 +93,7 @@ img{
 /* フル画面の色指定 */
 .modaal-fullscreen .modaal-content-container{
     background:rgba(139, 46, 83, 0.7);
-    color:#EADBBB;
+    /* color:#EADBBB; */
     text-align:center;
 }
 
@@ -109,11 +109,38 @@ img{
     background: #666;
 }
 
+
+/* 画像の横幅を100%にしてレスポンシブ化 */
+/* .modaal-content-container img{
+    border: 5px solid #fff;
+    width:100%;
+	max-width:700px;
+	height:auto;
+	vertical-align: bottom;/*画像の下にできる余白を削除*/
+/* }   */
+
 /* キャプション */
 .caption{
     display:block;
     padding:0px 0;
     margin:0 0;
+    font-size: small;
+}
+
+.modaal-video .modaal-inner-wrapper{
+    padding:0;
+    background-color:rgba(139, 46, 83, 0.7);
+}
+
+.character{
+    display: block;
+    text-align: center;
+    width:80%;
+    height:auto;
+    padding:20px 0px;
+    margin:10px 10px;
+    background-color: aliceblue;
+
 }
 
 /* ここから6.2.3章 */
