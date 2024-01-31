@@ -2,9 +2,9 @@
 
 /*ここから先にCSSをかくのはNG*/
 body{
- margin:10px;
- padding:10px;
- font-family: 'Arial',YuGothic,'Yu Gothic','ヒラギノ角ゴ ProN W3','メイリオ','Meiryo';
+  margin: 0;
+  padding:0;
+ font-family: 'Arial','Yu Gothic','ヒラギノ角ゴ ProN W3','メイリオ','Meiryo';
 }
 
 
@@ -12,7 +12,7 @@ h1{
  text-align:center; 
  font-size:35px; color:#A9533C; 
  border-bottom:solid 5px #931E56;
- padding:10px;
+ padding:5px;
 }
 
 h2{
@@ -125,6 +125,27 @@ a:hover{
 }
 
 
+#text_aqua{
+  /* background: linear-gradient(-225deg, rgba(105, 234, 204, 0.2) 0%, rgba(234, 204, 248, 0.2) 48%, rgba(102, 84, 241, 0.2) 100%); */
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-image: linear-gradient(to top, rgba(48,207,208,0.5) 0%, rgba(51,8,103,0.5) 100%);
+  border-radius: 30px;
+  text-align: center;
+}
+
+
+#pics_aqua{
+  padding:0;
+  margin:0;
+  border:thick 5px aqua;
+  border-radius:5px;
+  border-color: aquamarine; 
+  width:200px;
+  height:auto
+}
 
 /* 7-1-32 ボタンを虹色にする */
 /* ボタン周辺のdivクラス */
@@ -304,15 +325,7 @@ a:hover{
   text-decoration: none;
 }
 
-#aqua{
-  padding:0;
-  margin:0;
-  border:thick 5px aqua;
-  border-radius:5px;
-  border-color: aquamarine; 
-  width:200px;
-  height:auto
-}
+
 
 /* 
 アクア様をハートに切り抜くコード。
