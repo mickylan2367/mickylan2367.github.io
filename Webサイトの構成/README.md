@@ -1,15 +1,15 @@
-<p>
-    <img src="スライド1.JPG">
+<p align="center">
+    <img src="スライド1.JPG" width="80%">
 </p>
-<p>
-    <img src="スライド2.JPG">
+<p align="center">
+    <img src="スライド2.JPG" width="80%">
 </p>
-<p>
-    <img src="スライド3.JPG">
+<p align="center">
+    <img src="スライド3.JPG" width="80%">
 </p>
-<p>
-    <img src="スライド4.JPG">
+<p align="center">
+    <img src="スライド4.JPG" width="80%">
 </p>
-<p>
-    <img src="スライド5.JPG">
+<p align="center">
+    <img src="スライド5.JPG" width="80%">
 </p>
