@@ -15,6 +15,7 @@ var bar = new ProgressBar.Line(splash_text, {
             margin:'-30px 0 0 0',
             transform:'translate(-50% -50%)',
             'font-size':'1.5rem',
+            'font-weight':'10px',
             color:'#fff',
         },
         autoStyleContainer:false

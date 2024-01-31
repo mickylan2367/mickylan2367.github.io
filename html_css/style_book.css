@@ -6,11 +6,21 @@
     z-index:999;
     width:100%;
     height:100%;
-    background-color:#333;
+    background:rgba(64, 4, 3, 1);
+    /* background-image: url(../logo2.jpg); */
+    /* background-size: cover; */
     text-align:center;
     color:#fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
+#logo{
+    width:95%;
+    height:90%;
+    text-align: center;
+}
 /* Loadeing 画面中央配置 */
 #splash_text{
     position:absolute;
