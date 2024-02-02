@@ -60,7 +60,7 @@ a:hover{
   margin-right: 8px;
   margin-bottom: 0px;
   padding-top: 10px;
-  padding-bottom: 10px;
+  padding-bottom: 0px;
   background-image: linear-gradient(to top, rgba(251, 194, 235, 0.5) 0%, rgba(166, 193, 238, 0.5) 100%);
   border-radius: 10px;
 }
@@ -152,7 +152,6 @@ a:hover{
 /* ボタン周辺のdivクラス */
 .button{
   background:transparent;
-  margin:0;
   padding:15px 0;
   text-align: center;
 }

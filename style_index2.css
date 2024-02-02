@@ -67,6 +67,7 @@
 .slider{
     width:100%;
     margin:0 auto;
+    padding: 0;
 }
 
 .slider img{
@@ -95,7 +96,7 @@
 .slick-prev,
 .slick-next{
     position:absolute;
-    top:42%;
+    top:48%;
 
     /* マウスカーソルを指マークに */
     cursor:pointer;
@@ -105,8 +106,8 @@
     border-top: 15px solid #582893;
     border-right:15px solid #582893;
     border-radius: 5px;
-    height:40px;
-    width:40px;
+    height:80px;
+    width:80px;
     z-index: 990;
 }
 
@@ -152,4 +153,20 @@
 
 .slick-dots .slick-active button{
     background: #333;
+}
+
+.finish{
+    display:inline-block;
+    width:100vw;
+    height:fit-content;
+    background: #931E56;
+    color:#EADBBB;
+    font-size: 18px;
+    padding-bottom: 50px;
+}
+
+.finish a{
+    color:#EADBBB;
+    outline:none;
+    text-decoration: none;
 }
