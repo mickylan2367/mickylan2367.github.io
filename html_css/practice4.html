@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="javascriptの練習" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.css">
+    <link rel="stylesheet" href="style_book.css"> 
+    <style>
+    h1{
+        text-align:center; 
+        font-size:30px; color:#A9533C; 
+        border-bottom:solid 5px #931E56;
+        padding:10px;
+    }
+
+    .h2-title{
+        text-align:left;
+        font-size:25px;
+        border-bottom:solid 3px #931E56;
+        margin-right:19%;
+        margin-left:0px;
+        margin-top: 0;
+        margin-bottom: 0;
+        padding-left:30px;
+        padding-top:0;
+        padding-bottom: 0;
+        padding-right: 0;
+    }
+    </style>
+</head>
+<body>
+
+    <h1>スライドショーを作る</h1>
+    <p>このページはスライドショーの使い方練習ページです。</p>
+    
+    <h2 class="h2-title" style="margin-top: 30px;">対比スライドショー</h2>
+    <p class="p-ex">2つの画像の動きを対比させて見せます</p>
+    <div class="slide_show3">
+        <ul class="slider-top">
+            <li class="slider-item slider-itme01"></li>
+            <li class="slider-item slider-itme02"></li>
+            <li class="slider-item slider-itme03"></li>
+        </ul>
+        
+        <ul class="slider-bottom" dir="rtl">
+            <!-- スライダーの方向を変更 -->
+            <li class="slider-item slider-itme04"></li>
+            <li class="slider-item slider-itme05"></li>
+            <li class="slider-item slider-itme06"></li>
+        </ul>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

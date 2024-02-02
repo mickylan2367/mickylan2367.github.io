@@ -5,7 +5,7 @@
     position:fixed;
     z-index:999;
     width:100%;
-    height:100%;
+    height:100vh;
     background:rgba(64, 4, 3, 1);
     /* background-image: url(../logo2.jpg); */
     /* background-size: cover; */
@@ -63,26 +63,34 @@
     transform:scaleY(0);
 }
 
-/* ここから6.1.3章 */
-
-#slider{
-    width:100%;
-    /* スライダー全体の縦横を画面の高さいっぱい(100vh)にする */
-    height:100vh;
-    margin-bottom:0px;
-    padding-bottom:0px;
-}
 
 /* ここから6.2.6章 */
 .gallery{
     display:inline;
-    /* justify-content:space-evenly; */
+    vertical-align: middle;
 }
 
 .gallery li{
     padding-top:0px;
-    padding-bottom:0.5px;
+    padding-bottom:0px;
     list-style:none;
+    text-align: center;
+    margin:0;
+    vertical-align: middle;
+}
+
+
+.gallery_imgs{
+    margin-top: 0.5%;
+}
+
+.gallery_imgs p{
+    margin-top: 0.05%;
+}
+
+.gallery_imgs img{
+    width:20%;
+    height:180px;
 }
 
 /* 使用する写真に癖をつける */
@@ -107,6 +115,8 @@ img{
     background:rgba(139, 46, 83, 0.7);
     /* color:#EADBBB; */
     text-align:center;
+    width: 100%;
+    height: 100vh;
 }
 
 .modaal-fullscreen .modaal-close{
@@ -154,6 +164,344 @@ img{
     background-color: aliceblue;
 
 }
+
+/* スライドshow! */
+.slide_show{
+    width:80%;
+    margin:0 auto;
+}
+
+.slide_show img{
+    width:500px;
+    height:450px;
+    padding: 0px;
+    margin:0px;
+    border-radius: 50px;
+
+}
+
+.slide_show .slick-slide{
+    transform: scale(0.8);
+    transition: all .5s;
+    opacity:0.5;
+}
+
+.slide_show .slick-slide.slick-center{
+    /* 中央の画像サイズだけ等倍にする */
+    transform: scale(1);
+    opacity:0.8; /*透過ナシ*/
+}
+
+
+/* 矢印の設定 */
+.slick-prev,
+.slick-next{
+    position:absolute;
+    top:42%;
+
+    /* マウスカーソルを指マークに */
+    cursor:pointer;
+    /* クリックしたら出てくる枠線を消す */
+    outline: none;
+    /* 矢印の色 */
+    border-top: 15px solid #582893;
+    border-right:15px solid #582893;
+    border-radius: 5px;
+    height:40px;
+    width:40px;
+}
+
+.slick-prev{
+    left:-1%;
+    transform: rotate(-135deg);
+}
+
+.slick-next{
+    /* 次へ矢印の位置 */
+    right:-4.5%;
+    transform: rotate(45deg);
+}
+
+.slick-prev:hover{
+    border-color:rgba(251, 194, 235, 1);
+}
+
+.slick-next:hover{
+    border-color:rgba(251, 194, 235, 1);
+}
+
+/* ドットナビゲーション設定 */
+.slick_dots{
+    text-align:center;
+    margin:20px 0 0 0;
+}
+
+.slick_dots li{
+    display: inline-block;
+    margin:0 5px;
+}
+
+.slick-dots button{
+    color:transparent;
+    outline:none;
+    width:8px;
+    height: 8px;
+    display: block;
+    border-radius: 50%;
+    background: #ccc;
+}
+
+.slick-dots .slick-active button{
+    background: #333;
+}
+
+.slideshow_bg{
+    padding-top: 30px;
+    padding-bottom: 10px;
+    background: linear-gradient(to top, #30cfd0 0%, #582893 100%);
+}
+
+
+
+/* スライドshow! 流すだけversion */
+.slide_show2 img{
+    width:auto;
+    height:300px;
+}
+
+.slide_show2 .slick-slide{
+    margin:0 10px;
+}
+
+/* スライドshow! 対比させて見せる方法 */
+.slide_show3{
+    position:relative;
+    padding-top:0.05%;
+    height:70vh;
+    background: linear-gradient(to top, #30cfd0 0%, #582893 100%);
+}
+
+.slider-top,
+.slider-bottom{
+    /*スライダーの上下の縦幅を画面の高さ半分にする*/
+    height: 30vh;
+}
+
+.slider-item01{
+    background: url(pics/good.gif);
+}
+
+.slider-item02{
+    background: url(pics/リラックマ.webp);
+}
+
+.slider-item03{
+    background: url(pics/love.gif);
+}
+
+.slider-item04{
+    background: url(pics/love3.gif);
+}
+
+
+.slider-item05{
+    background: url(pics/あんずまろん.jpg);
+}
+
+.slider-item06{
+    background: url(pics/love2.gif);
+}
+
+.slider-item{
+    width:100%; /* 各スライダーの横幅を画面高さいっぱいに表示する */
+    height:32.3vh;/*画面の高さ半分にする*/
+    background-repeat:no-repeat; /*背景画像をリピートしない*/
+    background-position: center; /*背景画像の位置を中央に*/
+    background-size: 30%; /*背景画像が.slider-item全体を覆う表示*/
+}
+
+
+/* スライドショー4 */
+.slide_show4{
+    position: relative; /*スライドショーの位置を起点とする*/
+    z-index:1;
+    height:400px;
+    background: linear-gradient(to top, #30cfd0 0%, #582893 100%);
+    padding-top:30px;
+    padding-bottom:0px;
+    margin-top:5px;
+    margin-bottom:50px;
+}
+
+.slider4-item01{
+    background:url(pics/love2.gif);
+}
+
+.slider4-item02{
+    background:url(pics/love.gif);
+}
+
+.slider4-item03{
+    background:url(pics/love3.gif);
+}
+
+.slider4-item{
+    width:100%;
+    height:300px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 300px;
+}
+
+.slick-prev4,
+.slick-next4{
+    position:absolute;
+    z-index: 3;
+    top:42%;
+
+    /* マウスカーソルを指マークに */
+    cursor:pointer;
+    /* クリックしたら出てくる枠線を消す */
+    outline: none;
+    /* 矢印の色 */
+    border-top: 10px solid #582893;
+    border-right:10px solid #582893;
+    height:30px;
+    width:30px;
+}
+
+.slick-prev4{
+    left:30%;
+    transform: rotate(-135deg);
+}
+
+.slick-prev4:hover{
+    border-top: 10px solid red;
+    border-right:10px solid red;
+}
+
+.slick-next4{
+    right: 27.5%;
+    transform: rotate(45deg);
+}
+
+.slick-next4:hover{
+    border-top: 10px solid red;
+    border-right:10px solid red;
+}
+
+/* スライドショー5 */
+.slide_show5{
+    position: relative; /*スライドショーの位置を起点とする*/
+    z-index:1;
+    height:400px;
+    background: linear-gradient(to top, #30cfd0 0%, #582893 100%);
+    padding-top:30px;
+    padding-bottom:0px;
+    margin-top:5px;
+    margin-bottom:50px;
+}
+
+.slider5-item01{
+    background:url(pics/love2.gif);
+}
+
+.slider5-item02{
+    background:url(pics/love.gif);
+}
+
+.slider5-item03{
+    background:url(pics/love3.gif);
+}
+
+.slider5-item{
+    width:100%;
+    height:300px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 300px;
+}
+
+.slick-prev5,
+.slick-next5{
+    position:absolute;
+    z-index: 3;
+    top:42%;
+
+    /* マウスカーソルを指マークに */
+    cursor:pointer;
+    /* クリックしたら出てくる枠線を消す */
+    outline: none;
+    /* 矢印の色 */
+    border-top: 10px solid #582893;
+    border-right:10px solid #582893;
+    height:30px;
+    width:30px;
+}
+
+.slick-prev5{
+    left:30%;
+    transform: rotate(-135deg);
+}
+
+.slick-prev5:hover{
+    border-top: 10px solid red;
+    border-right:10px solid red;
+}
+
+.slick-next5{
+    right: 27.5%;
+    transform: rotate(45deg);
+}
+
+.slick-next5:hover{
+    border-top: 10px solid red;
+    border-right:10px solid red;
+}
+
+/* ここから6.1.3章 */
+
+#slider{
+    width:100%;
+    /* スライダー全体の縦横を画面の高さいっぱい(100vh)にする */
+    height:100vh;
+    margin-top: 10px;
+    margin-bottom: 0px;
+    margin-left: 0;
+    margin-right:0;
+    /* margin-bottom:0px; */
+    padding-bottom:0px;
+}
+
+/*スライダー6*/
+#slider6{
+    width: 100%;
+    height:100vh;
+}
+
+
+/*スライダー7*/
+#slider7{
+    width: 100%;
+    height:100vh;
+    margin-bottom: 10vh;
+}
+
+.finish{
+    display:inline-block;
+    width:100vw;
+    height:20vh;
+    background: #931E56;
+    color:#EADBBB;
+    font-size: 20px;
+}
+
+.finish a{
+    color:#EADBBB;
+    outline:none;
+    text-decoration: none;
+}
+
 
 /* ここから6.2.3章 */
 /* チェックマークボタン？ */

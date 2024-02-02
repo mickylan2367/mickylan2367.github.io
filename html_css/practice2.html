@@ -6,10 +6,60 @@
             text-align:center; 
             font-size:30px; color:#EADBBB; 
             border-bottom:solid 5px #931E56;
+            margin: 0px;
+            padding-top:20px;
+            padding-bottom:10px;
         }
         body{
             /* background-image: url(../books.jfif); */
             background-color:rgba(186, 80, 90, 0.8);
+            margin:0px;
+            padding:0px;
+        }
+
+        .h2-title{
+            text-align:left;
+            font-size:25px;
+            color:#EADBBB;
+            border-bottom:solid 3px #931E56;
+            margin-right:19%;
+            margin-left:0px;
+            margin-top: 20px;
+            margin-bottom: 0;
+            padding-left:30px;
+            padding-top:0;
+            padding-bottom: 0;
+            padding-right: 0;
+        }
+
+        .aspect{
+            position:absolute;
+            right:10px;
+            top:80px;
+            margin:5px;
+            padding:5px;
+
+            width:15%;
+            background-color:rgba(125, 91, 131, 0.7);
+            text-align:center;
+            font-weight: bold;/*文字を太字に*/
+        }
+
+
+        .p-ex{
+            text-align:left;
+            font-size:20px;
+            color:#EADBBB;
+            
+            margin-right:19%;
+            margin-left:0px;
+            margin-top: 8px;
+            margin-bottom: 0;
+            
+            padding-left:30px;
+            padding-top:0;
+            padding-bottom: 0;
+            padding-right: 0;
         }
     </style>
 <head>
@@ -21,78 +71,169 @@
 <!-- 6.2.6 ギャラリー Modaalモーダルウィンドウを実現するJsライブラリ-->
 <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/Modaal/0.4.4/css/modaal.min.css">
 
+<!-- <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carouse@1.8.1/slick/slick.css"> -->
+                                            <!-- https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.css -->
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.css">
+
 <!-- cssで静的デザインを記述 -->
 <link rel="stylesheet" href="style_book.css"> 
 <!-- <link rel="stylesheet" href="style963.css"> -->
+
+<div id="splash">
+    <div id="splash_text"></div>
+    <div class = "loader_cover loader_cover-up"></div> 
+    <div class ="loader_cover loader_cover-down"></div>
+    <!-- splash -->
+</div>
 </head>
 
-<body>
-    <div id="splash">
-        <div id="splash_text"></div>
-        <div class = "loader_cover loader_cover-up"></div> 
-        <div class ="loader_cover loader_cover-down"></div>
-        <!-- splash -->
-    </div>
-    
+<body>    
     <h1>
         魔女の部屋
     </h1>
 
-    <div id="slider">
-    <!--slider--> </div>
+    <h2 class="h2-title" style="margin-top: 20px;">少しお洒落なモーダル画面</h2>
+    <p class="p-ex">画像をポチると、モーダルが現れます</p>
 
+    
     <ul class="gallery">
-        <!-- 表示させたいエリアのID名を指定する -->
+            <!-- 表示させたいエリアのID名を指定する -->
         <li>
             <a href="#gallery-1" class="gallery-list">
-                <img src="pics/aquarius.jpg" alt="" width="99%">
+                <img src="pics/sea.webp" alt="" width="100%", height="auto">
             </a>
         </li>
         <li>
             <a href="#gallery-2" class="gallery-list">
-                <img src="pics/aquarius.jpg" alt="" width="99%">
+                <img src="pics/universe.webp" alt="" width="100%", height="auto">
             </a>
         </li>
     </ul>
 
     <section id="gallery-1" class="hide-area">
-        <p>
-            <img src="pics/aquarius.jpg" alt="" width="280px" height="150px">
-            <span class="caption">水瓶座</span>
-        </p>
-        <p>
-            <img src="pics/libra.jpg" alt="" width="280px" height="150px">
-            <span class="caption">天秤座</span>
-        </p>
-        <p>
-            <img src="pics/scorpio.jpg" alt="" width="280px" height="150px">
-            <span class="caption">蠍座</span>
-        </p>
+        <div class="gallery_imgs">
+            <p>
+                <img src="pics/aquarius.jpg" alt="">
+                <span class="caption">水瓶座</span>
+            </p>
+            <p>
+                <img src="pics/libra.jpg" alt="">
+                <span class="caption">天秤座</span>
+            </p>
+            <p>
+                <img src="pics/scorpio.jpg" alt="">
+                <span class="caption">蠍座</span>
+            </p>
+        </div>
     </section>
 
     <section id="gallery-2" class="hide-area">
-        <p>
-            <img src="pics/picese.jpg" alt="" width="280px" height="150px">
-            <span class="caption">魚座</span>
-        </p>
-        <p>
-            <img src="pics/libra.jpg" alt="" width="280px" height="150px">
-            <span class="caption">天秤座</span>
-        </p>
-        <p>
-            <img src="pics/scorpio.jpg" alt="" width="280px" height="150px">
-            <span class="caption">蠍座</span>
-        </p>
+        <div class="gallery_imgs">
+            <p>
+                <img src="pics/picese.jpg" alt="">
+                <span class="caption">魚座</span>
+            </p>
+            <p>
+                <img src="pics/libra.jpg" alt="">
+                <span class="caption">天秤座</span>
+            </p>
+            <p>
+                <img src="pics/scorpio.jpg" alt="">
+                <span class="caption">蠍座</span>
+            </p>
+        </div>
     </section>
 
 
-    <!-- モーダルウィンドウ -->
-    <div class="character">
-        <a href="https://www.youtube.com/embed/Su5XaS0iclc?si=O3i9Q6etmc0bZOZH" class="video-open">
-        <img src="pics/あんずまろん.jpg" width="30%" height="auto">
-        </a>
-        <section class="caption">あんずまろん</section>
+    <h2 class="h2-title">スライドショー</h2>
+    <p class="p-ex">複数画像の中央に注目させて見せる</p>
+    <p class="p-ex" style="font-size: 8px;">あれ？これボタンの位置が..</p>
+    <div class="slideshow_bg">
+        <ul class="slide_show">
+            <li><img src="pics/あんずまろん.jpg"></li>
+            <li><img src="pics/リラックマ.webp"></li>
+            <li><img src="pics/scorpio.jpg"></li>
+            <li><img src="pics/libra.jpg"></li>
+        </ul>
     </div>
+
+    <h2 class="h2-title" style="margin-top: 30px;">流すだけスライドショー</h2>
+    <p class="p-ex">横にひたすら画像を流します</p>
+    <div class="slideshow_bg2">
+        <ul class="slide_show2">
+            <li><img src="pics/あんずまろん.jpg"></li>
+            <li><img src="pics/sea.webp"></li>
+            <li><img src="pics/my_sabian.png"></li>
+            <li><a href="coding_index.html"><img src="pics/universe.webp"></a></li>
+            <li><img src="pics/libra.jpg"></li>
+        </ul>
+    </div>
+
+    <h2 class="h2-title" style="margin-top: 30px;">対比スライドショー</h2>
+    <p class="p-ex">2つの画像の動きを対比させて見せます</p>
+    <p class="p-ex" style="font-size: 10px;">これ、写真サイズを調整しないと変になるかも</p>
+    
+    <div class="slide_show3">
+        <ul class="slider-top">
+            <li class="slider-item slider-item01"></li>
+            <li class="slider-item slider-item02"></li>
+            <li class="slider-item slider-item03"></li>
+        </ul>
+        
+        <ul class="slider-bottom" dir="rtl">
+            <!-- スライダーの方向を変更 -->
+            <li class="slider-item slider-item04"></li>
+            <li class="slider-item slider-item05"></li>
+            <li class="slider-item slider-item06"></li>
+        </ul>
+    </div>
+
+    <h2 class="h2-title" style="margin-top: 30px;">横移動 de show!</h2>
+    <p class="p-ex">横移動させて全画面で見せる</p>
+    
+    <ul class="slide_show4">
+        <li class="slider4-item slider4-item01"></li>
+        <li class="slider4-item slider4-item02"></li>
+        <li class="slider4-item slider4-item03"></li>
+    </ul>
+
+    <h2 class="h2-title" style="margin-top: 30px;">フェードイン・アウトde Show!</h2>
+    <p class="p-ex">フェードインアウトさせて全画面で見せる</p>
+
+    <ul class="slide_show5">
+        <li class="slider5-item slider5-item01"></li>
+        <li class="slider5-item slider5-item02"></li>
+        <li class="slider5-item slider5-item03"></li>
+    </ul>
+
+    <h2 class="h2-title">ズームアウト de show!</h2>
+    <p class="p-ex">ゆっくりズームアウトしながら全画面で見せる</p>
+    <div id="slider">
+    <!--slider--> </div>
+
+    <h2 class="h2-title" style="margin-top: 30px;">右上に引く de Show!</h2>
+    <p class="p-ex">動きを画像に組み合わせる</p>
+
+    <div id="slider6">
+    <!-- slider --></div>
+
+    <h2 class="h2-title" style="margin-top: 30px;">動画 de Show!</h2>
+    <p class="p-ex">動画を流す</p>
+    <p class="p-ex" style="font-size: small;">PCの場合は懐かしの情報表現で作ってた動画が流れます</p>
+    
+    <div id="slider7">
+        <!-- slider --></div>
+
+    
+    <div class="aspect">
+        <p style="size:6px"><a style="text-decoration: none;color:rgba(217, 212, 234, 0.9);", href="../index.html">ホームへ戻る</a></p>
+    </div>
+
+    <div class="finish">
+        <p style="text-align: center;">ページトップへ戻る</p>
+        <p style="text-align: center;"><a href="../index.html">ホームへ戻る</a></p>
+    </div>
+
 
     <!--  jquery -->
     <!-- jqueryはJavaScripのライブ蟻 -->
@@ -101,6 +242,7 @@
     <script src="https://rawgit.com/kimmobrunfeldt/progressbar.js/master/dist/progressbar.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vegas/2.4.4/vegas.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Modaal/0.4.4/js/modaal.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <!-- IE11用対策？ -->
     <!-- 自作のJavasvipt -->
     <script src="js/script.js"></script>
