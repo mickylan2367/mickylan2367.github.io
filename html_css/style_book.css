@@ -493,7 +493,8 @@ img{
     height:20vh;
     background: #931E56;
     color:#EADBBB;
-    font-size: 20px;
+    font-size: 18px;
+    padding-bottom: 50px;
 }
 
 .finish a{
