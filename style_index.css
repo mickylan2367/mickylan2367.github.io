@@ -24,12 +24,12 @@ h2{
 
 h3{
  text-align:center;
- font-size:18px;
 }
 
-.h3_design{
+#h3_design{
   margin:0;
   padding:0;
+  font-size:40px;
 }
 
 p{
@@ -50,6 +50,12 @@ a:hover{
   display:block;
   text-align: center;
   width:500px; /*50%にしちゃうと、ボタンの中の50%にしてしまう*/
+  padding:0px 0;
+  margin:0 0;
+}
+
+.caption1{
+  display:block;
   padding:0px 0;
   margin:0 0;
 }
@@ -155,11 +161,18 @@ a:hover{
   padding:15px 0;
   text-align: center;
 }
+
+.button2{
+  background:transparent;
+  padding:15px 0;
+  text-align: center;
+}
+
 /* 日記のボタン */
 .gradient_diary{
   /* ボタンの形状 */
   display:inline-block;
-  padding:15px 30px;
+  padding:30px 60px;
   border-radius:20px;
   text-decoration:none;
   border:1px solid #6c9bd2;
@@ -187,7 +200,7 @@ a:hover{
 .gradient_star{
   /* ボタンの形状 */
   display:inline-block;
-  padding:15px 30px;
+  padding:30px 60px;
   border-radius:20px;
   text-decoration:none;
   border:1px solid #fbd8b5;
@@ -215,14 +228,14 @@ a:hover{
 .gradient_coding{
   /* ボタンの形状 */
   display:inline-block;
-  padding:15px 30px;
+  padding:30px 60px;
   border-radius:20px;
   text-decoration:none;
   background: radial-gradient(#F13F79, #FFC778);
   border:1px solid #fa6c9f;
   color:#FFF;
   outline:none;
-
+  height:650px;
   /* アニメーションの設定 */
   transition:all 0.4s ease-out;
 }
@@ -243,14 +256,13 @@ a:hover{
 .gradient_books{
   /* ボタンの形状 */
   display:inline-block;
-  padding:15px 30px;
+  padding:30px 60px;
   border-radius:20px;
   text-decoration:none;
   border:1px solid #fa6c9f;
   background:linear-gradient(25deg, rgba(255, 0, 0, 0.4), rgba(0, 255, 0, 0.4)) ,url(books.jfif);
   color:#fdeadf;
   outline:none;
-
   /* アニメーションの設定 */
   transition:all 0.4s ease-out;
 }
@@ -272,7 +284,7 @@ a:hover{
 .gradient_form{
   /* ボタンの形状 */
   display:inline-block;
-  padding:5px 30px;
+  padding:30px 60px;
   border-radius:20px;
   text-decoration:none;
   border:1px solid #fa6c9f;
@@ -296,11 +308,11 @@ a:hover{
   text-decoration: none;
 }
 
-/* お問い合わせホーム */
+/* 写真ホーム */
 .gradient_pics{
   /* ボタンの形状 */
   display:inline-block;
-  padding:15px 30px;
+  padding:30px 60px;
   border-radius:20px;
   text-decoration:none;
   border:1px solid #fa6c9f;
@@ -368,7 +380,7 @@ a:hover{
  font-weight:bold;
  box-shadow:2px 2px 4px #C2A2B6,
  4px 4px 2px #F7F4E5 inset;
- 
+
  }
 
 #deg ul{
