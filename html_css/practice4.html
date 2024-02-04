@@ -5,13 +5,12 @@
     <meta name="javascriptの練習" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.css">
-    <link rel="stylesheet" href="style_book.css"> 
+    <link rel="stylesheet" href="style_gnav.css"> 
     <style>
     h1{
         text-align:center; 
         font-size:30px; color:#A9533C; 
         border-bottom:solid 5px #931E56;
-        padding:10px;
     }
 
     .h2-title{
@@ -30,28 +29,240 @@
     </style>
 </head>
 <body>
-
-    <h1>スライドショーを作る</h1>
-    <p>このページはスライドショーの使い方練習ページです。</p>
     
-    <h2 class="h2-title" style="margin-top: 30px;">対比スライドショー</h2>
-    <p class="p-ex">2つの画像の動きを対比させて見せます</p>
-    <div class="slide_show3">
-        <ul class="slider-top">
-            <li class="slider-item slider-itme01"></li>
-            <li class="slider-item slider-itme02"></li>
-            <li class="slider-item slider-itme03"></li>
-        </ul>
-        
-        <ul class="slider-bottom" dir="rtl">
-            <!-- スライダーの方向を変更 -->
-            <li class="slider-item slider-itme04"></li>
-            <li class="slider-item slider-itme05"></li>
-            <li class="slider-item slider-itme06"></li>
-        </ul>
+    <div class="truebtn">
+        <span></span>
+        <span></span>
+        <span></span>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-    <script src="js/script.js"></script>
+    <nav id="g-navt">
+        <div id="g-nav-listt">
+            <ul>
+                <li><a href="../index.html">ホームに戻る</a></li>
+                <li><a href="coding_index.html">コーディングに戻る</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="circle-bgt"></div>
+
+    <h1>グローバルナビゲーション</h1>
+    <h2 class="h2-title">メモ:</h2>
+    <p style="margin-left:20px;font-size: xx-small;">
+        .circle-bgのtransitionをいじると、アニメーションがゆっくりになる!<br>
+        あと、テキストの出現はg-nav.panelactiveのanimation-delay, animation-durationをいじる
+    </p>
+    <h2 class="h2-title">ボタンを押してね!</h2>
+    <div style="display: inline-flex;">
+    <ul class="mm">
+        <li class="mikan">
+            <div style="justify-content: center;align-items: center;">
+                <h3>上中央</h3>
+                <div class="openbtn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+            <nav id="g-nav">
+                <div id="g-nav-list">
+                    <ul>
+                        <li><a href="#top">Top</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#service">Service</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+            </nav>
+            <div class="circle-bg"></div> <!--背景画像-->
+        </li>
+        <li class="mikan">
+            <div>
+                <h3>下中央</h3>
+                <div class="openbtn1">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+            
+            <nav id="g-nav1">
+                <div id="g-nav-list1">
+                    <ul>
+                        <li><a href="#top">Top</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#service">Service</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+            </nav>
+            <div class="circle-bg1"></div>
+        </li>
+        <li class="mikan">
+            <div style="height: 100px;">
+                <h3>右中央</h3>
+                <div class="openbtn2">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+            
+            <nav id="g-nav2">
+                <div id="g-nav-list2">
+                    <ul>
+                        <li><a href="#top">Top</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#service">Service</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+            </nav>
+            <div class="circle-bg2"></div>
+        </li>
+        <li class="mikan">
+            <div style="height: 100px;">
+                <h3>左中央</h3>
+                <div class="openbtn3">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+            
+            <nav id="g-nav3">
+                <div id="g-nav-list3">
+                    <ul>
+                        <li><a href="#top">Top</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#service">Service</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+            </nav>
+            <div class="circle-bg3"></div>
+        </li>
+        <li class="mikan">
+            <div style="height: 100px;">
+                <h3>左中央</h3>
+                <div class="openbtn4">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+            
+            <nav id="g-nav4">
+                <div id="g-nav-list4">
+                    <ul>
+                        <li><a href="#top">Top</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#service">Service</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+            </nav>
+            <div class="circle-bg4"></div>
+        </li>
+        <li class="mikan">
+            <div style="height: 100px;">
+                <h3>右上</h3>
+                <div class="openbtn5">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+            
+            <nav id="g-nav5">
+                <div id="g-nav-list5">
+                    <ul>
+                        <li><a href="#top">Top</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#service">Service</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+            </nav>
+            <div class="circle-bg5"></div>        
+        </li>
+        <li class="mikan">
+            <div style="height: 100px;">
+                <h3>左上</h3>
+                <div class="openbtn6">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+            
+            <nav id="g-nav6">
+                <div id="g-nav-list6">
+                    <ul>
+                        <li><a href="#top">Top</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#service">Service</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+            </nav>
+            <div class="circle-bg6"></div>        
+        </li>
+        <li class="mikan">
+            <div style="height: 100px;">
+                <h3>左下</h3>
+                <div class="openbtn7">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+            
+            <nav id="g-nav7">
+                <div id="g-nav-list7">
+                    <ul>
+                        <li><a href="#top">Top</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#service">Service</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+            </nav>
+            <div class="circle-bg7"></div>
+        </li>
+        <li class="mikan">
+            <div style="height: 100px;">
+                <h3>中央</h3>
+                <div class="openbtn8">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+            
+            <nav id="g-nav8">
+                <div id="g-nav-list8">
+                    <ul>
+                        <li><a href="#top">Top</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#service">Service</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+            </nav>
+            <div class="circle-bg8"></div>
+        </li>
+    </ul>
+    </div>
+
+    <h2 class="h2-title">感想</h2>
+    <p style="margin-left: 20px;">
+        このページ作るの結構大変だった<br>(;´･ω･)<br>
+        実はコードもcssだけで千行以上ある...これ、もうちょっと簡略化できる気がする<br>(-_-;)<br>
+        ホームに戻るには画面右上のぽっちを押して、「ホームへ戻る」を選択して下さい。その子が本物です。
+    </p>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="js/script_gnav.js"></script>
 </body>
 </html>

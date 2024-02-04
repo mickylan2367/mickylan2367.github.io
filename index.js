@@ -51,3 +51,34 @@ $('.slider').slick({
     dots:false,
 });
 
+// picture
+
+// スライダー6, 7
+var windowwidth = window.innerWidth || document.documentElement.clientWidth || 0;
+var responsiveImage6;
+
+if(windowwidth > 768){
+    var responsiveImage6 = [
+        {src: 'html_css/pics/universe.webp'},
+        {src: 'html_css/pics/sea.webp'},
+        {src: 'html_css/pics/nasa.webp'}
+    ];
+}else{
+    var responsiveImage6 = [
+        {src: 'html_css/pics/good.gif'},
+        {src: 'html_css/pics/love.gif'},
+        {src: 'html_css/pics/love2.gif'}
+    ];
+}
+// Vegas全体の設定
+$('#slider6').vegas({
+    overlay:true,/*overlayの種類はtrue */
+    transition:'fade2',/* 切り替わりのアニメーション*/
+    transitionDuration:2000,
+    delay:5000,
+    animationDuration:9000000,
+    animation:'random',/*スライドのアニメーション*/
+    slides:responsiveImage6,
+});
+
+

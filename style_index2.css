@@ -189,15 +189,21 @@
     background:linear-gradient(to top, rgba(255, 0, 0, 0.8) 0%, #931E56 100%);
 }
 
-.icon .caption1{
+.icon a .caption1{
     display:block;
     padding:3px 3px;
     margin:0 0;
     font-size:x-small;
 }
   
-.icon .caption1:hover{
+.icon a .caption1:hover{
     text-decoration: none;
     color: #EADBBB;
 }
-  
+
+
+#slider6{
+    width:auto;
+    height:500px;
+    border-radius:10px;
+}

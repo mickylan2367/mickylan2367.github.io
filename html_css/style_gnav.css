@@ -1,0 +1,1471 @@
+
+.mm{
+    display: inline-flexbox;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.mikan{
+    display: inline-block;
+    list-style: none;
+    padding: 3vh;
+    text-align: center;
+    width: 70px;
+    /* flex-grow: 1; */
+    height:100px;
+    background-color: aquamarine;
+    margin:2px 2px;
+    border-radius: 10px;
+    box-shadow: 3px 3px 6px -2px #555,
+  3px 3px 8px rgba(255,255,255,0.8) inset;
+}
+
+.openbtn{
+    display: inline-flex;
+    justify-content:center;
+    align-items: center;
+    position: relative;
+    /* top:10px;
+    right:10px; */
+    z-index:9999;
+    cursor:pointer;
+    width:50px;
+    height:50px;
+}
+
+.openbtn span{
+    display:inline-block;
+    transition: all .4s;
+    position: absolute;
+    left:14px;
+    height:3px;
+    border-radius:2px;
+    background-color:#666;
+    width:45%;
+}
+
+.openbtn span:nth-of-type(1){
+    top:15px;
+}
+
+.openbtn span:nth-of-type(2){
+    top:23px;
+}
+
+.openbtn span:nth-of-type(3){
+    top:31px;
+}
+
+.openbtn.active span:nth-of-type(1){
+    top:18px;
+    left:18px;
+    transform: translateY(6px) rotate(-45deg);
+    width:30%;
+}
+
+.openbtn.active span:nth-of-type(2){
+    opacity: 0;
+}
+
+.openbtn.active span:nth-of-type(3){
+    top:30px;
+    left:18px;
+    transform: translateY(-6px) rotate(45deg);
+    width:30%;
+}
+
+#g-nav.panelactive{
+    position:fixed;
+    z-index:999;
+    top:0;
+    width: 100%;
+    height: 100vh;
+}
+
+/* ナビゲーションの縦スクロール */
+#g-nav-list{
+    display:none;
+    position:fixed;
+    width:100%;
+    height: 100vh;
+    overflow:auto;
+    -webkit-overflow-scrolling:touch;
+}
+
+#g-nav.panelactive #g-nav-list{
+    /* クラスが付与されると出現 */
+    display: block;
+}
+
+#g-nav ul{
+    opacity: 0;/*はじめは透過*/
+
+    /* 
+        ナビゲーションは天地中央ぞろえ
+        レイアウトによって調整削除可能
+    */
+
+    position:fixed;
+    z-index: 999;
+    top:50%;
+    left:50%;
+    transform:translate(-50%, -50%);
+}
+
+/* 背景が出現後にナビゲーションを表示 */
+#g-nav.panelactive ul{
+    opacity: 1;
+}
+
+/* 
+    背景が出現後にナビゲーションliを表示 
+    レイアウトによって調整可能
+*/
+#g-nav.panelactive ul li{
+    animation-name:gnaviAnime;
+    animation-duration: 1s;
+
+    /* 0.2秒遅らせて出現 */
+    animation-delay: .2s;
+    animation-fill-mode:forwards;
+    opacity: 0;
+    font-size: xx-large;
+}
+
+@keyframes gnaviAnime{
+    0%{opacity: 0;}
+    100%{opacity: 1;}
+}
+
+/* 丸の拡大 */
+.circle-bg{
+    position:fixed;
+    z-index:3;
+
+    /* 丸の形 */
+    width:100px;
+    height:100px;
+    border-radius:50%;
+    background:#999;
+
+    /* 
+        丸のスタート位置と形状 
+        scaleをはじめは0に
+    */
+    transform: scale(0);
+    top:-50px;
+    left:calc(50% - 50px); /*画面の半分から円の半径を引いたところ*/
+    
+    transition: all .6s; /*0.6秒かけてアニメーション*/
+}
+
+.circle-bg.circleactive{
+    /* クラスが付与されたらscaleを拡大 */
+    transform: scale(50);
+}
+
+nav ul{
+    list-style: none;
+    text-align: center;
+}
+
+nav ul li a{
+    display:inline-block;
+    text-decoration: none;
+    color:#000;
+    padding:10px;
+}
+
+
+
+
+
+/* 二つ目のボタン */
+/* ボタン下から*/
+.openbtn1 {
+    display: inline-flex;
+    justify-content:center;
+    align-items: center;
+    position: relative;
+    /* top:10px;
+    right:10px; */
+    z-index: 9999;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+}
+
+.openbtn1 span {
+    display: inline-block;
+    transition: all .4s;
+    position: absolute;
+    left: 14px;
+    height: 3px;
+    border-radius: 2px;
+    background-color: #666;
+    width: 45%;
+}
+
+.openbtn1 span:nth-of-type(1) {
+    top: 15px;
+}
+
+.openbtn1 span:nth-of-type(2) {
+    top: 23px;
+}
+
+.openbtn1 span:nth-of-type(3) {
+    top: 31px;
+}
+
+.openbtn1.active span:nth-of-type(1) {
+    top: 18px;
+    left: 18px;
+    transform: translateY(6px) rotate(-45deg);
+    width: 30%;
+}
+
+.openbtn1.active span:nth-of-type(2) {
+    opacity: 0;
+}
+
+.openbtn1.active span:nth-of-type(3) {
+    top: 30px;
+    left: 18px;
+    transform: translateY(-6px) rotate(45deg);
+    width: 30%;
+}
+
+#g-nav1.panelactive {
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+}
+
+/* ナビゲーションの縦スクロール */
+#g-nav1-list {
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+#g-nav1.panelactive #g-nav1-list {
+    /* クラスが付与されると出現 */
+    display: block;
+}
+
+#g-nav1 ul {
+    opacity: 0;/*はじめは透過*/
+
+    /* 
+        ナビゲーションは天地中央ぞろえ
+        レイアウトによって調整削除可能
+    */
+
+    position: fixed;
+    z-index: 999;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* 背景が出現後にナビゲーションを表示 */
+#g-nav1.panelactive ul {
+    opacity: 1;
+}
+
+/* 
+    背景が出現後にナビゲーションliを表示 
+    レイアウトによって調整可能
+*/
+#g-nav1.panelactive ul li {
+    animation-name: gnaviAnime;
+    animation-duration: 1s;
+
+    /* 0.2秒遅らせて出現 */
+    animation-delay: .2s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+    font-size: xx-large;
+}
+
+@keyframes gnaviAnime {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+/* 丸の拡大 */
+.circle-bg1 {
+    position: fixed;
+    z-index: 3;
+
+    /* 丸の形 */
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: #999;
+
+    /* 
+        丸のスタート位置と形状 
+        scaleをはじめは0に
+    */
+    transform: scale(0);
+    bottom: -50px;
+    left: calc(50% - 50px); /*画面の半分から円の半径を引いたところ*/
+    
+    transition: all .6s; /*0.6秒かけてアニメーション*/
+}
+
+.circle-bg1.circleactive {
+    /* クラスが付与されたらscaleを拡大 */
+    transform: scale(50);
+}
+
+/* 3つめのボタン */
+.openbtn2 {
+    position:relative;
+    display: inline-flex;
+    justify-content:center;
+    align-items: center;
+    /* top:10px;
+    right:10px; */
+    z-index: 9999;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+}
+
+.openbtn2 span {
+    display: inline-block;
+    transition: all .4s;
+    position: absolute;
+    left: 14px;
+    height: 3px;
+    border-radius: 2px;
+    background-color: #666;
+    width: 45%;
+}
+
+.openbtn2 span:nth-of-type(1) {
+    top: 15px;
+}
+
+.openbtn2 span:nth-of-type(2) {
+    top: 23px;
+}
+
+.openbtn2 span:nth-of-type(3) {
+    top: 31px;
+}
+
+.openbtn2.active span:nth-of-type(1) {
+    top: 18px;
+    left: 18px;
+    transform: translateY(6px) rotate(-45deg);
+    width: 30%;
+}
+
+.openbtn2.active span:nth-of-type(2) {
+    opacity: 0;
+}
+
+.openbtn2.active span:nth-of-type(3) {
+    top: 30px;
+    left: 18px;
+    transform: translateY(-6px) rotate(45deg);
+    width: 30%;
+}
+
+#g-nav2.panelactive {
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+}
+
+/* ナビゲーションの縦スクロール */
+#g-nav-list2 {
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+#g-nav2.panelactive #g-nav-list2 {
+    /* クラスが付与されると出現 */
+    display: block;
+}
+
+#g-nav2 ul {
+    opacity: 0;/*はじめは透過*/
+
+    /* 
+        ナビゲーションは天地中央ぞろえ
+        レイアウトによって調整削除可能
+    */
+
+    position: fixed;
+    z-index: 999;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* 背景が出現後にナビゲーションを表示 */
+#g-nav2.panelactive ul {
+    opacity: 1;
+}
+
+/* 
+    背景が出現後にナビゲーションliを表示 
+    レイアウトによって調整可能
+*/
+#g-nav2.panelactive ul li {
+    animation-name: gnaviAnime;
+    animation-duration: 4s;
+
+    /* 0.2秒遅らせて出現 */
+    animation-delay: .2s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+    font-size: xx-large;
+}
+
+@keyframes gnaviAnime {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+/* 丸の拡大 */
+.circle-bg2 {
+    position: fixed;
+    z-index: 3;
+
+    /* 丸の形 */
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: #999;
+
+    /* 
+        丸のスタート位置と形状 
+        scaleをはじめは0に
+    */
+    transform: scale(0);
+    right: -50px;
+    top: calc(50% - 50px); /*画面の半分から円の半径を引いたところ*/
+    
+    transition: all 1.8s; /*0.6秒かけてアニメーション*/
+}
+
+.circle-bg2.circleactive {
+    /* クラスが付与されたらscaleを拡大 */
+    transform: scale(50);
+}
+
+
+.openbtn3 {
+    position:relative;
+    display: inline-flex;
+    justify-content:center;
+    align-items: center;
+    z-index: 9999;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+}
+
+.openbtn3 span {
+    display: inline-block;
+    transition: all .4s;
+    position: absolute;
+    left: 14px;
+    height: 3px;
+    border-radius: 2px;
+    background-color: #666;
+    width: 45%;
+}
+
+.openbtn3 span:nth-of-type(1) {
+    top: 15px;
+}
+
+.openbtn3 span:nth-of-type(2) {
+    top: 23px;
+}
+
+.openbtn3 span:nth-of-type(3) {
+    top: 31px;
+}
+
+.openbtn3.active span:nth-of-type(1) {
+    top: 18px;
+    left: 18px;
+    transform: translateY(6px) rotate(-45deg);
+    width: 30%;
+}
+
+.openbtn3.active span:nth-of-type(2) {
+    opacity: 0;
+}
+
+.openbtn3.active span:nth-of-type(3) {
+    top: 30px;
+    left: 18px;
+    transform: translateY(-6px) rotate(45deg);
+    width: 30%;
+}
+
+#g-nav3.panelactive {
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+}
+
+/* ナビゲーションの縦スクロール */
+#g-nav-list3 {
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+#g-nav3.panelactive #g-nav-list3 {
+    /* クラスが付与されると出現 */
+    display: block;
+}
+
+#g-nav3 ul {
+    opacity: 0;/*はじめは透過*/
+
+    /* 
+        ナビゲーションは天地中央ぞろえ
+        レイアウトによって調整削除可能
+    */
+
+    position: fixed;
+    z-index: 999;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* 背景が出現後にナビゲーションを表示 */
+#g-nav3.panelactive ul {
+    opacity: 1;
+}
+
+/* 
+    背景が出現後にナビゲーションliを表示 
+    レイアウトによって調整可能
+*/
+#g-nav3.panelactive ul li {
+    animation-name: gnaviAnime;
+    animation-duration: 4s;
+
+    /* 0.2秒遅らせて出現 */
+    animation-delay: .2s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+    font-size: xx-large;
+}
+
+@keyframes gnaviAnime {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+/* 丸の拡大 */
+.circle-bg3 {
+    position: fixed;
+    z-index: 3;
+
+    /* 丸の形 */
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: #999;
+
+    /* 
+        丸のスタート位置と形状 
+        scaleをはじめは0に
+    */
+    transform: scale(0);
+    left: -50px;
+    top: calc(50% - 50px); /*画面の半分から円の半径を引いたところ*/
+    
+    transition: all 1.8s; /*0.6秒かけてアニメーション*/
+}
+
+.circle-bg3.circleactive {
+    /* クラスが付与されたらscaleを拡大 */
+    transform: scale(50);
+}
+
+.openbtn4 {
+    position:relative;
+    display: inline-flex;
+    justify-content:center;
+    align-items: center;
+    z-index: 9999;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+}
+
+.openbtn4 span {
+    display: inline-block;
+    transition: all .4s;
+    position: absolute;
+    left: 14px;
+    height: 3px;
+    border-radius: 2px;
+    background-color: #666;
+    width: 45%;
+}
+
+.openbtn4 span:nth-of-type(1) {
+    top: 15px;
+}
+
+.openbtn4 span:nth-of-type(2) {
+    top: 23px;
+}
+
+.openbtn4 span:nth-of-type(3) {
+    top: 31px;
+}
+
+.openbtn4.active span:nth-of-type(1) {
+    top: 18px;
+    left: 18px;
+    transform: translateY(6px) rotate(-45deg);
+    width: 30%;
+}
+
+.openbtn4.active span:nth-of-type(2) {
+    opacity: 0;
+}
+
+.openbtn4.active span:nth-of-type(3) {
+    top: 30px;
+    left: 18px;
+    transform: translateY(-6px) rotate(45deg);
+    width: 30%;
+}
+
+#g-nav4.panelactive {
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+}
+
+/* ナビゲーションの縦スクロール */
+#g-nav-list4 {
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+#g-nav4.panelactive #g-nav-list4 {
+    /* クラスが付与されると出現 */
+    display: block;
+}
+
+#g-nav4 ul {
+    opacity: 0; /* はじめは透過 */
+
+    /* 
+        ナビゲーションは天地中央ぞろえ
+        レイアウトによって調整削除可能
+    */
+
+    position: fixed;
+    z-index: 999;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* 背景が出現後にナビゲーションを表示 */
+#g-nav4.panelactive ul {
+    opacity: 1;
+}
+
+/* 
+    背景が出現後にナビゲーションliを表示 
+    レイアウトによって調整可能
+*/
+#g-nav4.panelactive ul li {
+    animation-name: gnaviAnime;
+    animation-duration: 4s;
+
+    /* 0.2秒遅らせて出現 */
+    animation-delay: .2s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+    font-size: xx-large;
+}
+
+@keyframes gnaviAnime {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+/* 丸の拡大 */
+.circle-bg4 {
+    position: fixed;
+    z-index: 3;
+
+    /* 丸の形 */
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: #999;
+
+    /* 
+        丸のスタート位置と形状 
+        scaleをはじめは0に
+    */
+    transform: scale(0);
+    right: -50px;
+    top: -50px; /*画面の半分から円の半径を引いたところ*/
+    
+    transition: all 1.8s; /*0.6秒かけてアニメーション*/
+}
+
+.circle-bg4.circleactive {
+    /* クラスが付与されたらscaleを拡大 */
+    transform: scale(50);
+}
+
+/* 右下 */
+.openbtn5 {
+    position:relative;
+    display: inline-flex;
+    justify-content:center;
+    align-items: center;
+    z-index: 9999;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+}
+
+.openbtn5 span {
+    display: inline-block;
+    transition: all .4s;
+    position: absolute;
+    left: 14px;
+    height: 3px;
+    border-radius: 2px;
+    background-color: #666;
+    width: 45%;
+}
+
+.openbtn5 span:nth-of-type(1) {
+    top: 15px;
+}
+
+.openbtn5 span:nth-of-type(2) {
+    top: 23px;
+}
+
+.openbtn5 span:nth-of-type(3) {
+    top: 31px;
+}
+
+.openbtn5.active span:nth-of-type(1) {
+    top: 18px;
+    left: 18px;
+    transform: translateY(6px) rotate(-45deg);
+    width: 30%;
+}
+
+.openbtn5.active span:nth-of-type(2) {
+    opacity: 0;
+}
+
+.openbtn5.active span:nth-of-type(3) {
+    top: 30px;
+    left: 18px;
+    transform: translateY(-6px) rotate(45deg);
+    width: 30%;
+}
+
+#g-nav5.panelactive {
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+}
+
+/* ナビゲーションの縦スクロール */
+#g-nav-list5 {
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+#g-nav5.panelactive #g-nav-list5 {
+    /* クラスが付与されると出現 */
+    display: block;
+}
+
+#g-nav5 ul {
+    opacity: 0;/*はじめは透過*/
+
+    /* 
+        ナビゲーションは天地中央ぞろえ
+        レイアウトによって調整削除可能
+    */
+
+    position:fixed;
+    z-index: 999;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* 背景が出現後にナビゲーションを表示 */
+#g-nav5.panelactive ul {
+    opacity: 1;
+}
+
+/* 
+    背景が出現後にナビゲーションliを表示 
+    レイアウトによって調整可能
+*/
+#g-nav5.panelactive ul li {
+    animation-name: gnaviAnime;
+    animation-duration: 4s;
+
+    /* 0.2秒遅らせて出現 */
+    animation-delay: .2s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+    font-size: xx-large;
+}
+
+/* 丸の拡大 */
+.circle-bg5 {
+    position: fixed;
+    z-index: 3;
+
+    /* 丸の形 */
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: #999;
+
+    /* 
+        丸のスタート位置と形状 
+        scaleをはじめは0に
+    */
+    transform: scale(0);
+    right: -50px;
+    bottom: -50px; /*画面の半分から円の半径を引いたところ*/
+    
+    transition: all 1.8s; /*0.6秒かけてアニメーション*/
+}
+
+.circle-bg5.circleactive {
+    /* クラスが付与されたらscaleを拡大 */
+    transform: scale(50);
+}
+
+.openbtn6 {
+    position:relative;
+    display: inline-flex;
+    justify-content:center;
+    align-items: center;
+    z-index: 9999;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+}
+
+.openbtn6 span {
+    display: inline-block;
+    transition: all .4s;
+    position: absolute;
+    left: 14px;
+    height: 3px;
+    border-radius: 2px;
+    background-color: #666;
+    width: 45%;
+}
+
+.openbtn6 span:nth-of-type(1) {
+    top: 15px;
+}
+
+.openbtn6 span:nth-of-type(2) {
+    top: 23px;
+}
+
+.openbtn6 span:nth-of-type(3) {
+    top: 31px;
+}
+
+.openbtn6.active span:nth-of-type(1) {
+    top: 18px;
+    left: 18px;
+    transform: translateY(6px) rotate(-45deg);
+    width: 30%;
+}
+
+.openbtn6.active span:nth-of-type(2) {
+    opacity: 0;
+}
+
+.openbtn6.active span:nth-of-type(3) {
+    top: 30px;
+    left: 18px;
+    transform: translateY(-6px) rotate(45deg);
+    width: 30%;
+}
+
+#g-nav6.panelactive {
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+}
+
+/* ナビゲーションの縦スクロール */
+#g-nav-list6 {
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+#g-nav6.panelactive #g-nav-list6 {
+    /* クラスが付与されると出現 */
+    display: block;
+}
+
+#g-nav6 ul {
+    opacity: 0;/*はじめは透過*/
+
+    /* 
+        ナビゲーションは天地中央ぞろえ
+        レイアウトによって調整削除可能
+    */
+
+    position: fixed;
+    z-index: 999;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* 背景が出現後にナビゲーションを表示 */
+#g-nav6.panelactive ul {
+    opacity: 1;
+}
+
+/* 
+    背景が出現後にナビゲーションliを表示 
+    レイアウトによって調整可能
+*/
+#g-nav6.panelactive ul li {
+    animation-name: gnaviAnime;
+    animation-duration: 4s;
+
+    /* 0.2秒遅らせて出現 */
+    animation-delay: .2s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+    font-size: xx-large;
+}
+
+@keyframes gnaviAnime {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+/* 丸の拡大 */
+.circle-bg6 {
+    position: fixed;
+    z-index: 3;
+
+    /* 丸の形 */
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: #999;
+
+    /* 
+        丸のスタート位置と形状 
+        scaleをはじめは0に
+    */
+    transform: scale(0);
+    left: -50px;
+    top: -50px; /*画面の半分から円の半径を引いたところ*/
+    
+    transition: all 1.8s; /*0.6秒かけてアニメーション*/
+}
+
+.circle-bg6.circleactive {
+    /* クラスが付与されたらscaleを拡大 */
+    transform: scale(50);
+}
+
+
+.openbtn7 {
+    position:relative;
+    display: inline-flex;
+    justify-content:center;
+    align-items: center;
+    z-index: 9999;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+}
+
+.openbtn7 span {
+    display: inline-block;
+    transition: all .4s;
+    position: absolute;
+    left: 14px;
+    height: 3px;
+    border-radius: 2px;
+    background-color: #666;
+    width: 45%;
+}
+
+.openbtn7 span:nth-of-type(1) {
+    top: 15px;
+}
+
+.openbtn7 span:nth-of-type(2) {
+    top: 23px;
+}
+
+.openbtn7 span:nth-of-type(3) {
+    top: 31px;
+}
+
+.openbtn7.active span:nth-of-type(1) {
+    top: 18px;
+    left: 18px;
+    transform: translateY(6px) rotate(-45deg);
+    width: 30%;
+}
+
+.openbtn7.active span:nth-of-type(2) {
+    opacity: 0;
+}
+
+.openbtn7.active span:nth-of-type(3) {
+    top: 30px;
+    left: 18px;
+    transform: translateY(-6px) rotate(45deg);
+    width: 30%;
+}
+
+#g-nav7.panelactive {
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+}
+
+/* ナビゲーションの縦スクロール */
+#g-nav-list7 {
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+#g-nav7.panelactive #g-nav-list7 {
+    /* クラスが付与されると出現 */
+    display: block;
+}
+
+#g-nav7 ul {
+    opacity: 0;/*はじめは透過*/
+
+    /* 
+        ナビゲーションは天地中央ぞろえ
+        レイアウトによって調整削除可能
+    */
+
+    position: fixed;
+    z-index: 999;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* 背景が出現後にナビゲーションを表示 */
+#g-nav7.panelactive ul {
+    opacity: 1;
+}
+
+/* 
+    背景が出現後にナビゲーションliを表示 
+    レイアウトによって調整可能
+*/
+#g-nav7.panelactive ul li {
+    animation-name: gnaviAnime;
+    animation-duration: 4s;
+
+    /* 0.2秒遅らせて出現 */
+    animation-delay: .2s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+    font-size: xx-large;
+}
+
+@keyframes gnaviAnime {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+/* 丸の拡大 */
+.circle-bg7 {
+    position: fixed;
+    z-index: 3;
+
+    /* 丸の形 */
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: #999;
+
+    /* 
+        丸のスタート位置と形状 
+        scaleをはじめは0に
+    */
+    transform: scale(0);
+    left:-50px;
+    bottom:-50px;
+    transition: all 1.8s; /*0.6秒かけてアニメーション*/
+}
+
+.circle-bg7.circleactive {
+    /* クラスが付与されたらscaleを拡大 */
+    transform: scale(50);
+}
+
+.openbtn8 {
+    position:relative;
+    display: inline-flex;
+    justify-content:center;
+    align-items: center;
+    z-index: 980;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+}
+
+.openbtn8 span {
+    display: inline-block;
+    transition: all .4s;
+    position: absolute;
+    left: 14px;
+    height: 3px;
+    border-radius: 2px;
+    background-color: #666;
+    width: 45%;
+}
+
+.openbtn8 span:nth-of-type(1) {
+    top: 15px;
+}
+
+.openbtn8 span:nth-of-type(2) {
+    top: 23px;
+}
+
+.openbtn8 span:nth-of-type(3) {
+    top: 31px;
+}
+
+.openbtn8.active span:nth-of-type(1) {
+    top: 18px;
+    left: 18px;
+    transform: translateY(6px) rotate(-45deg);
+    width: 30%;
+}
+
+.openbtn8.active span:nth-of-type(2) {
+    opacity: 0;
+}
+
+.openbtn8.active span:nth-of-type(3) {
+    top: 30px;
+    left: 18px;
+    transform: translateY(-6px) rotate(45deg);
+    width: 30%;
+}
+
+#g-nav8.panelactive {
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+}
+
+/* ナビゲーションの縦スクロール */
+#g-nav-list8 {
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+#g-nav8.panelactive #g-nav-list8 {
+    /* クラスが付与されると出現 */
+    display: block;
+}
+
+#g-nav8 ul {
+    opacity: 0; /* はじめは透過 */
+
+    /* 
+        ナビゲーションは天地中央ぞろえ
+        レイアウトによって調整削除可能
+    */
+
+    position: fixed;
+    z-index: 999;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* 背景が出現後にナビゲーションを表示 */
+#g-nav8.panelactive ul {
+    opacity: 1;
+}
+
+/* 
+    背景が出現後にナビゲーションliを表示 
+    レイアウトによって調整可能
+*/
+#g-nav8.panelactive ul li {
+    animation-name: gnaviAnime;
+    animation-duration: 4s;
+
+    /* 0.2秒遅らせて出現 */
+    animation-delay: .2s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+    font-size: xx-large;
+}
+
+@keyframes gnaviAnime {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+/* 丸の拡大 */
+.circle-bg8 {
+    position: fixed;
+    z-index: 3;
+
+    /* 丸の形 */
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: #999;
+
+    /* 
+        丸のスタート位置と形状 
+        scaleをはじめは0に
+    */
+    transform: scale(0);
+    top: calc(50% - 50px); 
+    left: calc(50% - 50px); /* 画面の半分から円の半径を引いたところ */
+    
+    transition: all 1.8s; /* 0.6秒かけてアニメーション */
+}
+
+.circle-bg8.circleactive {
+    /* クラスが付与されたらscaleを拡大 */
+    transform: scale(50);
+}
+
+
+.truebtn {
+    position: fixed;
+    top: 10px;
+    right:10px;
+    z-index: 99999;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+}
+
+.truebtn span {
+    display: inline-block;
+    transition: all .4s;
+    position: absolute;
+    left: 14px;
+    height: 3px;
+    border-radius: 2px;
+    background-color: #666;
+    width: 45%;
+}
+
+.truebtn span:nth-of-type(1) {
+    top: 15px;
+}
+
+.truebtn span:nth-of-type(2) {
+    top: 23px;
+}
+
+.truebtn span:nth-of-type(3) {
+    top: 31px;
+}
+
+.truebtn.active span:nth-of-type(1) {
+    top: 18px;
+    left: 18px;
+    transform: translateY(6px) rotate(-45deg);
+    width: 30%;
+}
+
+.truebtn.active span:nth-of-type(2) {
+    opacity: 0;
+}
+
+.truebtn.active span:nth-of-type(3) {
+    top: 30px;
+    left: 18px;
+    transform: translateY(-6px) rotate(45deg);
+    width: 30%;
+}
+
+#g-navt.panelactive {
+    position: fixed;
+    z-index: 9990;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+}
+
+/* ナビゲーションの縦スクロール */
+#g-nav-listt {
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+#g-navt.panelactive #g-nav-listt {
+    /* クラスが付与されると出現 */
+    display: block;
+}
+
+#g-navt ul {
+    opacity: 0;/*はじめは透過*/
+
+    /* 
+        ナビゲーションは天地中央ぞろえ
+        レイアウトによって調整削除可能
+    */
+
+    position: absolute;
+    z-index: 10000;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* 背景が出現後にナビゲーションを表示 */
+#g-navt.panelactive ul {
+    opacity: 1;
+}
+
+/* 
+    背景が出現後にナビゲーションliを表示 
+    レイアウトによって調整可能
+*/
+#g-navt.panelactive ul li {
+    animation-name: gnaviAnime;
+    animation-duration: 4s;
+
+    /* 0.2秒遅らせて出現 */
+    animation-delay: .2s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+    font-size: xx-large;
+}
+
+#g-navt.panelactive ul li a{
+    color:aliceblue;
+}
+
+#g-navt.panelactive ul li a:hover{
+    color:#EADBBB;
+}
+
+@keyframes gnaviAnime {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+/* 丸の拡大 */
+.circle-bgt {
+    position: fixed;
+    z-index: 5;
+
+    /* 丸の形 */
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background:#931E56;
+
+    /* 
+        丸のスタート位置と形状 
+        scaleをはじめは0に
+    */
+    transform: scale(0);
+    right: -50px;
+    top: calc(50% - 50px); /*画面の半分から円の半径を引いたところ*/
+    
+    transition: all 1.8s; /*0.6秒かけてアニメーション*/
+}
+
+.circle-bgt.circleactive {
+    /* クラスが付与されたらscaleを拡大 */
+    transform: scale(50);
+}

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="javascriptの練習" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.css">
+    <link rel="stylesheet" href="style_gnav.css"> 
+    <style>
+    h1{
+        text-align:center; 
+        font-size:30px; color:#A9533C; 
+        border-bottom:solid 5px #931E56;
+        padding:10px;
+    }
+
+    .h2-title{
+        text-align:left;
+        font-size:25px;
+        border-bottom:solid 3px #931E56;
+        margin-right:19%;
+        margin-left:0px;
+        margin-top: 0;
+        margin-bottom: 0;
+        padding-left:30px;
+        padding-top:0;
+        padding-bottom: 0;
+        padding-right: 0;
+    }
+    </style>
+</head>
+<body>
+
+    <h1>グローバルナビゲーション</h1>
+
+    <h2 class="h2-title">クリックしたら円背景が下から拡大</h2>
+    <p>
+    <div class="openbtn1">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+    </p>
+
+    <nav id="g-nav1">
+        <div id="g-nav-list1">
+            <ul>
+                <li><a href="#top">Top</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#service">Service</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="circle-bg1"></div> <!--背景画像-->
+
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="js/script_gnav.js"></script>
+</body>
+</html>
