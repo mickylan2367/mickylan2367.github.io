@@ -175,8 +175,8 @@
 .icon{
     display: block;
     text-align: center;
-    margin-right: 35%;
-    margin-left: 35%;
+    /* margin-right: 35%;
+    margin-left: 35%; */
     border:1px solid #fa6c9f;
     border-radius: 40px;
     background:linear-gradient(25deg, rgba(255, 0, 0, 0.4), rgba(0, 255, 0, 0.4));
@@ -193,7 +193,6 @@
     display:block;
     padding:3px 3px;
     margin:0 0;
-    font-size:x-small;
 }
   
 .icon a .caption1:hover{

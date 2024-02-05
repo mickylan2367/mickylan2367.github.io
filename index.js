@@ -82,3 +82,107 @@ $('#slider6').vegas({
 });
 
 
+// 読みやすいように幅を調整
+if(windowwidth>1200){
+    
+    $('#author_caption').css({
+        'width':'62%'
+    });
+    $('#motto_adler').css({
+        'width':'60%'
+    });
+    $('#motto_aqua').css({
+        'width':'60%'
+    });
+
+    $('.button .gradient_pics .caption').css({/*img要素に指定してもいいし、いっそcaptionで幅広げるのもあり？*/
+        'width':'500px'
+    });
+
+    $('.button .gradient_pics .img').css({/*img要素に指定してもいいし、いっそcaptionで幅広げるのもあり？*/
+        'width':'500px',
+        'height':'500px'
+    });
+
+    $('#caption_fontsize').css({
+        'font-size':'small'
+    });
+
+    $('.icon').css({
+        'margin-left':'40%',
+        'margin-right':'40%',
+    });
+
+    $('.caption1').css({
+        'font-size':'xx-small'
+    });
+
+
+}else{
+
+    $('.slider li').css({
+        'margin-right':'100px',
+        'margin-left':'100px',
+    });
+
+    $('.slider img').css({
+        'width':'800px',
+        'height':'800px'
+    });
+
+    $('#author_caption').css({
+        'width':'80%'
+    });
+
+    $('#motto_adler').css({
+        'width':'80%'
+    });
+
+    $('#motto_aqua').css({
+        'width':'80%',
+        'font-size':'9px'
+    });
+
+    $('.button .gradient_pics #slider6').css({
+        'width':'800px',
+        'height':'800px'
+    });
+
+    $('.button .gradient_diary .caption').css({
+        'font-size':'25px'
+    });
+
+    $('.button .gradient_star .caption').css({
+        'font-size':'25px'
+    });
+
+    $('.button .gradient_coding .caption').css({
+        'font-size':'25px'
+    });
+
+    $('.button .gradient_books .caption').css({
+        'font-size':'25px'
+    });
+
+    $('.button .gradient_form .caption').css({
+        'font-size':'25px'
+    });
+
+    $('.button .gradient_pics .caption').css({
+        'font-size':'25px'
+    });
+
+    $('#caption_fontsize').css({
+        'font-size':'xx-small'
+    });
+
+    $('.icon').css({
+        'margin-left':'30%',
+        'margin-right':'30%',
+        'padding-top':'5px'
+    });
+
+    $('.caption1').css({
+        'font-size':'xx-small'
+    });
+};

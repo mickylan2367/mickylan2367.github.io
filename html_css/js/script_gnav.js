@@ -1,5 +1,15 @@
 
+var windowwidth = window.innerWidth || document.documentElement.clientWidth || 0;
 
+if(windowwidth > 1200){
+    $(".mikan").css({
+        'width':'70px'
+    });
+}else{
+    $(".mikan").css({
+        'width':'65px'
+    });
+}
 
 $(".openbtn").click(function(){ /*ボタンがクリックされたら*/
     $(this).toggleClass('active');/*ボタンにactiveクラスを付与し*/
