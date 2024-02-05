@@ -7,7 +7,7 @@
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.css">
     <link rel="stylesheet" href="style_gnav.css"> 
     <style>
-    h1{
+    /* h1{
         text-align:center; 
         font-size:30px; color:#A9533C; 
         border-bottom:solid 5px #931E56;
@@ -25,11 +25,22 @@
         padding-top:0;
         padding-bottom: 0;
         padding-right: 0;
+    } */
+    body{
+        margin:0;
+        background:radial-gradient(rgba(237, 187, 207, 0.4), rgba(191, 108, 145, 0.5))
     }
     </style>
+
+    <link rel="stylesheet" href="style_index.css">
+    <link rel="stylesheet" href="style_move.css"> 
+
+    <div id="splash">
+        <div id="splash-logo">Now Loading...</div>
+    </div>
 </head>
 <body>
-    
+    <div id="container">
     <div class="truebtn">
         <span></span>
         <span></span>
@@ -262,8 +273,9 @@
         実はコードもcssだけで千行以上ある...これ、もうちょっと簡略化できる気がする<br>(-_-;)<br>
         ホームに戻るには画面右上のぽっちを押して、「ホームへ戻る」を選択して下さい。その子が本物です。
     </p>
-
+    </div>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     <script src="js/script_gnav.js"></script>
+    <script src="js/script_move.js"></script>
 </body>
 </html>

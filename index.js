@@ -2,7 +2,7 @@
 // 4.1.3章
 var bar = new ProgressBar.Line(splash_text, {
     easing:'easeInOut',
-    duration:1000,
+    duration:5000,
     strokeWidth:0.2,
     color:"#555",
     trailWidth:0.2,
@@ -33,6 +33,11 @@ bar.animate(1.0, function(){
     $("#splash_text").fadeOut(10);
     $(".loader_cover-up").addClass("coveranime");
     $(".loader_cover-down").addClass("coveranime");
+
+    $("#splash-logo3").delay(90000).fadeOut('slow')
+    $("#splash3").delay(2000).fadeOut('slow', function(){
+        $('body').addClass('appear'); /*フェードアウト後bodyいappearクラス付与*/
+    });
     $("#splash").fadeOut(10);
 });
 
