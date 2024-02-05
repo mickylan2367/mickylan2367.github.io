@@ -5,11 +5,23 @@
     <meta name="コーディング" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+        body{
+            margin: 0;
+            padding: 0;
+            background:radial-gradient(rgba(125, 91, 131, 0.4), rgba(241, 63, 121, 0.5)), url(../books.jfif);
+            background-size: cover;
+        }
     </style>
     <link rel="stylesheet" href="style_index.css">
+    <link rel="stylesheet" href="style_move.css"> 
+
+    <div id="splash">
+        <div id="splash-logo">Now Loading...</div>
+    </div>
 </head>
 <body>
-
+    <div id="container">
+    <div class="mainblock">
     <h1>魔女の部屋</h1>
     <h2 class="h2-title">HTML and CSS</h2>
     <div class="subblock">
@@ -24,6 +36,8 @@
         <ul>
             <li><a href="practice3.html">Modaal.js</a></li>
             <li><a href="practice2.html">スライドショーの実験(slick)</a></li>
+            <li><a href="practice4.html">グローバルナビゲーションの追加</a></li>
+            <li><a href="practice5.html">画面遷移の動き（検証中）</a></li>
         </ul>
     </div>
     
@@ -52,5 +66,10 @@
     <div class="aspect">
         <p style="size:6px"><a style="text-decoration: none;color:rgba(217, 212, 234, 0.9);", href="../index.html">ホームへ戻る</a></p>
     </div>
+    </div>
+
+    </div>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="js/script_move.js"></script>
 </body>
 </html>

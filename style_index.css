@@ -46,10 +46,17 @@ a:hover{
   text-decoration: underline;
 }
 
+
 .caption{
   display:block;
   text-align: center;
-  width:500px; /*50%にしちゃうと、ボタンの中の50%にしてしまう*/
+  padding:0px 0;
+  margin:0 0;
+}
+
+#caption_fontsize{
+  display:block;
+  text-align: center;
   padding:0px 0;
   margin:0 0;
 }
@@ -75,9 +82,7 @@ a:hover{
 }
 
 #author_caption{
-  width:62%;
   display:block;
-  /* justify-content: center; */
   text-align: center;
   margin-left: auto;
   margin-right: auto;
@@ -97,7 +102,7 @@ a:hover{
 #motto_adler{
   background-image: linear-gradient(to top, #c79081 0%, #dfa579 100%);
   border-radius: 10px;
-  width:60%;
+  /* width:60%; */
   display:block;
   /* justify-content: center; */
   text-align: center;
@@ -114,7 +119,7 @@ a:hover{
   color:aliceblue;
   font-weight: 900;
   border-radius: 10px;
-  width:60%;
+  /* width:60%; */
   display:block;
   /* justify-content: center; */
   text-align: center;
@@ -154,6 +159,7 @@ a:hover{
   background:transparent;
   padding:15px 0;
   text-align: center;
+
 }
 
 .button2{
@@ -229,7 +235,6 @@ a:hover{
   border:1px solid #fa6c9f;
   color:#FFF;
   outline:none;
-  height:650px;
   /* アニメーションの設定 */
   transition:all 0.4s ease-out;
 }

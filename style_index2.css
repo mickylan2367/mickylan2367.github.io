@@ -1,3 +1,70 @@
+
+
+/* ぐるぐるする */
+#splash3{
+    position:fixed;
+    width:100%;
+    height:100%;
+    /* background:radial-gradient(rgba(217, 212, 234, 1), #931E56); */
+    background:rgba(64, 4, 3, 1);
+    z-index:999;
+    text-align:center;
+    /* color:#fff; */
+}
+
+#splash-logo3{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+}
+
+#splash-logo3 img{
+    width:80vh;
+}
+
+.fadeUp3{
+    animation-name:rotateY;
+    animation-duration:5s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+@keyframes rotateX{
+    0% {
+        opacity: 0;
+        transform: rotate3d(1, 0, 0, 0deg); /* 初期角度（回転しない） */
+    }
+    50% {
+        opacity: 0.5;
+        transform: rotate3d(1, 0, 0, 180deg); /* 180度回転 */
+    }
+    100% {
+        opacity: 1;
+        transform: rotate3d(1, 0, 0, 359deg); /* 360度回転 */
+    }
+}
+
+@keyframes rotateY{
+    0% {
+        opacity: 0;
+        transform: rotate3d(0, 1, 0, 0deg); /* 初期角度（回転しない） */
+    }
+    50% {
+        opacity: 0.2;
+        transform: rotate3d(0, 1, 0, 180deg); /* 180度回転 */
+    }
+    100% {
+        opacity: 1;
+        transform: rotate3d(0, 1, 0, 0deg); /* 360度回転 */
+    }
+}
+
+.splashbg3{
+    display: none;
+}
+
+
 #splash{
     /* fixedで全面に固定 */
     position:fixed;
@@ -14,11 +81,11 @@
     align-items: center;
 }
 
-#logo{
+/* #logo{
     width:95%;
     height:90%;
     text-align: center;
-}
+} */
 /* Loadeing 画面中央配置 */
 #splash_text{
     position:absolute;
@@ -75,7 +142,7 @@
     height:500px;
     padding: 0px;
     margin:0px;
-    margin-bottom: 10px;
+    margin-bottom: 30px;
     border-radius: 50px;
 }
 
@@ -175,8 +242,8 @@
 .icon{
     display: block;
     text-align: center;
-    margin-right: 35%;
-    margin-left: 35%;
+    /* margin-right: 35%;
+    margin-left: 35%; */
     border:1px solid #fa6c9f;
     border-radius: 40px;
     background:linear-gradient(25deg, rgba(255, 0, 0, 0.4), rgba(0, 255, 0, 0.4));
@@ -189,15 +256,20 @@
     background:linear-gradient(to top, rgba(255, 0, 0, 0.8) 0%, #931E56 100%);
 }
 
-.icon .caption1{
+.icon a .caption1{
     display:block;
     padding:3px 3px;
     margin:0 0;
-    font-size:x-small;
 }
   
-.icon .caption1:hover{
+.icon a .caption1:hover{
     text-decoration: none;
     color: #EADBBB;
 }
-  
+
+
+#slider6{
+    width:auto;
+    height:500px;
+    border-radius:10px;
+}
