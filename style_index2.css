@@ -62,9 +62,50 @@
     font-weight:900;
     color:#931E56;
     font-family: 'Cherry Swash', cursive;
-    margin-top: 10px;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    margin-top:0;
+    margin-bottom: 1%;
+    /* padding-top: 10px; */
+    /* padding-bottom: 10px; */
+    
+    position: relative;
+    padding:1px 10px;
+    /* margin-right:40%;
+    margin-left: 40%; */
+    border: solid 3px #931E56;
+    border-radius: 3px 30px 3px 30px;
+    /* box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.29); */
+}
+
+
+.h2-title1::before{
+    content:'';
+    position: absolute;
+    width:10px;
+    height:10px;
+    border:solid 3px #931E56;
+    border-radius:50%;
+    /* box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.29); */
+}
+
+.h2-title1::after{
+    content:'';
+    position: absolute;
+    width:10px;
+    height:10px;
+    border:solid 3px #931E56;
+    border-radius:50%;
+    /* box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.29); */
+}
+
+.h2-title1::after{
+    top:-12px;
+    left:-12px;
+    transform: rotateY(20deg);
+}
+
+.h2-title1::before{
+    bottom:-12px;
+    right:-12px;
 }
 
 .enterprise_logo{
@@ -217,7 +258,7 @@
 
 .slider img{
     width:500px;
-    height:500px;
+    /* height:500px; */
     padding: 0px;
     margin:0px;
     margin-bottom: 30px;
@@ -226,7 +267,7 @@
 
 .slider .slick-slide{
     transform: scale(0.8);
-    transition: all .5s;
+    transition: all 1s;
     opacity:0.5;
 }
 
@@ -355,6 +396,6 @@
 
 #slider6{
     width:auto;
-    height:500px;
+    /* height:500px; */
     border-radius:10px;
 }

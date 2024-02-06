@@ -46,7 +46,7 @@ bar.animate(1.0, function(){
 $('.slider').slick({
     autoplay:true, /*自動的に動き出すか。初期値はfalse*/
     infinite:true,
-    speed:500,
+    speed:1000,
     slidesToShow:3,
     slidesToScroll:1,
     prevArrow:'<div class="slick-prev"></div>',
@@ -62,7 +62,7 @@ $('.slider').slick({
 var windowwidth = window.innerWidth || document.documentElement.clientWidth || 0;
 var responsiveImage6;
 
-if(windowwidth > 768){
+if(windowwidth > 1200){
     var responsiveImage1 = [
         {src: 'homePicture/camellia.jpg'},
         {src: 'homePicture/stars.jpg'},
@@ -83,9 +83,9 @@ if(windowwidth > 768){
     ];
 
     var responsiveImage6 = [
-        {src: 'html_css/pics/good.gif'},
-        {src: 'html_css/pics/love.gif'},
-        {src: 'html_css/pics/love2.gif'}
+        {src: 'homePicture/smlpics/slider/camellia.png'},
+        {src: 'homePicture/smlpics/slider/julia.png'},
+        {src: 'homePicture/smlpics/slider/rose.png'}
     ];
 }
 
@@ -93,9 +93,9 @@ if(windowwidth > 768){
 $('#slider').vegas({
     overlay:true, //画面の網線やドットのオーバーレイパターン画像を指定
     transition:'blur', // 切り替わりのアニメーション
-    transitionDuration:20000, //切り替わりのアニメーション時間をミリ秒単位で指定
-    delay:10000, // スライド間の遅延時間をミリ秒単位で指定
-    animationDuration:20000,
+    transitionDuration:10000, //切り替わりのアニメーション時間をミリ秒単位で指定
+    delay:8000, // スライド間の遅延時間をミリ秒単位で指定
+    animationDuration:9999999,
     animation:'kenburns',
     slides:responsiveImage1,
 });
@@ -205,6 +205,19 @@ if(windowwidth>1200){
     $('.caption1').css({
         'font-size':'xx-small'
     });
+
+    $('#slider6').css({
+        'height':'500px'
+    });
+
+    $('.slider img').css({
+        'height':'500px'
+    });
+
+    $('.h2-title1').css({
+        'margin-right':'40%',
+        'margin-left':'40%'
+    })
 
 
 }else{
@@ -320,5 +333,23 @@ if(windowwidth>1200){
     $('.icon img').css({
         'width':'50%',
         'height':'200px'
-    })
+    });
+
+    $('#slider6').css({
+        'height':'80vh',
+        'margin-bottom':'3vh'
+    });
+
+    $('.slider img').css({
+        'height':'80vh'
+    });
+
+    $('.slider img').css({
+        'height':'80vh'
+    });
+
+    $('.h2-title1').css({
+        'margin-right':'30%',
+        'margin-left':'30%'
+    });
 };
