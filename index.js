@@ -130,6 +130,11 @@ $('.finish').click(function(){
 // 読みやすいように幅を調整
 if(windowwidth>1200){
 
+    $('.top .goodview').css({
+        'top':'28%',
+        'left':'0%'
+    });
+
     $('.enterprise_logo').css({
         'top':'8px',
         'right':'2%' 
@@ -225,6 +230,10 @@ if(windowwidth>1200){
         'margin-right':'100px',
         'margin-left':'100px',
     });
+
+    $('.index').css({
+        'height':"100vh"
+    })
 
     $('.slider img').css({
         'width':'800px',

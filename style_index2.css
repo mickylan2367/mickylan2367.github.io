@@ -32,8 +32,6 @@
 
 .top .goodview{
     position: absolute;
-    top:28%;
-    left:0%;
     width:100%;
     /* background-color: rgba(217, 212, 234, 0.3); */
     background: linear-gradient(270deg, transparent 0%, rgba(217, 212, 234, 0.3) 20%, rgba(217, 212, 234, 0.35) 50%, rgba(217, 212, 234, 0.3) 80%, transparent 100%);
