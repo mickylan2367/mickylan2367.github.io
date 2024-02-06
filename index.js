@@ -135,6 +135,10 @@ if(windowwidth>1200){
         'left':'0%'
     });
 
+    $('.top .goodview p').css({
+        'color': '#931E56'
+    });
+
     $('.enterprise_logo').css({
         'top':'8px',
         'right':'2%' 
@@ -153,8 +157,13 @@ if(windowwidth>1200){
     $('#page-link li').css({
         'margin-left':'11%',
         'margin-right':'11%',
-        'font-size': '30px'
+        'font-size': '30px',
+        'color': '#931E56'
     });
+
+    $('.btnripple1').css({
+        'color': '#931E56'
+    })
     
     $('#author_caption').css({
         'width':'62%'
@@ -205,6 +214,11 @@ if(windowwidth>1200){
         'left':'0%'
     });
 
+    $('.top .goodview p').css({
+        'color':'#fff'
+    });
+
+
     $('.enterprise_logo').css({
         'top':'2vh',
         'right':'2%'
@@ -223,8 +237,13 @@ if(windowwidth>1200){
     $('#page-link li').css({
         'margin-left':'8%',
         'margin-right':'8%',
-        'font-size': '40px'
+        'font-size': '40px',
+        'color': '#fff'
     });
+
+    $('.btnripple1').css({
+        'color': '#fff'
+    })
     
     $('.slider li').css({
         'margin-right':'100px',
@@ -232,7 +251,9 @@ if(windowwidth>1200){
     });
 
     $('.index').css({
-        'height':"100vh"
+        'height':"100vh",
+        'justify-content':'center',
+        'vertical-align':'center'
     })
 
     $('.slider img').css({

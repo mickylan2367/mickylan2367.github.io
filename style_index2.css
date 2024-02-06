@@ -24,7 +24,7 @@
 .top .goodview p{
     text-align: center;
     font-size: 70px;
-    color: #931E56;
+    /* color: #931E56; */
     padding-top:1px;
     padding-bottom:1px;
     font-family: 'Cherry Swash', cursive;
@@ -53,7 +53,7 @@
 }
 
 #page-link li a{
-    color: #931E56;
+    /* color: #931E56; */
     text-decoration: none;
 }
 
