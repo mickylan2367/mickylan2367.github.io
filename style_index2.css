@@ -1,4 +1,84 @@
 
+@import url('https://fonts.googleapis.com/css2?family=Cherry+Swash&display=swap');
+#slider{
+    width:100%;
+    /* スライダー全体の縦横を画面の高さいっぱい(100vh)にする */
+    height:110vh;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: 0;
+    margin-right:0;
+    /* margin-bottom:0px; */
+    padding-top:0px;
+    padding-bottom:0px;
+    z-index: 1;
+    border-radius: 10px;
+}
+
+
+.top{
+    padding:0;
+    margin:0;
+}
+
+.top .goodview p{
+    text-align: center;
+    font-size: 70px;
+    color: #931E56;
+    padding-top:1px;
+    padding-bottom:1px;
+    font-family: 'Cherry Swash', cursive;
+}
+
+.top .goodview{
+    position: absolute;
+    top:28%;
+    left:0%;
+    width:100%;
+    /* background-color: rgba(217, 212, 234, 0.3); */
+    background: linear-gradient(270deg, transparent 0%, rgba(217, 212, 234, 0.3) 20%, rgba(217, 212, 234, 0.35) 50%, rgba(217, 212, 234, 0.3) 80%, transparent 100%);
+    /* background: radial-gradient(rgba(217, 212, 234, 0.5), transparent); */
+    border-color: transparent;
+}
+
+#page-link{
+    margin-bottom: 30px;
+}
+
+#page-link li{
+    /* margin-left:10%;
+    margin-right: 10%; */
+    text-align: center;
+    list-style: none;
+    /* font-size: 30px; */
+    font-family: 'Cherry Swash', cursive;
+}
+
+#page-link li a{
+    color: #931E56;
+    text-decoration: none;
+}
+
+.h2-title1{
+    font-size:40px;
+    font-weight:900;
+    color:#931E56;
+    font-family: 'Cherry Swash', cursive;
+    margin-top: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.enterprise_logo{
+    display:flex;
+    position: absolute;
+    top:8px;
+    right:2%; 
+}
+
+.enterprise_logo li{
+    list-style: none;
+}
 
 /* ぐるぐるする */
 #splash3{
@@ -246,25 +326,32 @@
     margin-left: 35%; */
     border:1px solid #fa6c9f;
     border-radius: 40px;
-    background:linear-gradient(25deg, rgba(255, 0, 0, 0.4), rgba(0, 255, 0, 0.4));
+    background-color:rgba(64, 4, 3, 1);
     text-decoration: none;
 }
 
 .icon:hover{
     text-decoration: none;
     border-color: transparent;
-    background:linear-gradient(to top, rgba(255, 0, 0, 0.8) 0%, #931E56 100%);
 }
 
 .icon a .caption1{
-    display:block;
-    padding:3px 3px;
+    position:relative;
+    padding-bottom:10px;
     margin:0 0;
 }
   
 .icon a .caption1:hover{
     text-decoration: none;
     color: #EADBBB;
+}
+
+.icon img{
+    /* width:80%;
+    height:100%; */
+    border-radius: 10px;
+    padding-top:5%;
+    margin:0;
 }
 
 

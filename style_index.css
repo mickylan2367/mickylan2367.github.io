@@ -41,10 +41,10 @@ a{
   text-decoration: none;
 }
 
-a:hover{
+/* a:hover{
   color:red;
   text-decoration: underline;
-}
+} */
 
 
 .caption{

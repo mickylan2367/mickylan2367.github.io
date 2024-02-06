@@ -1,0 +1,84 @@
+
+.btnripple1{
+    position:relative;
+    display: inline-block;
+    text-decoration: none;
+    color:#333;
+    outline: none;
+}
+
+.btnripple1:hover::before{
+    content:'';
+    /* 絶対配置で波形の位置を決める */
+    position: absolute;
+    left:20%;
+    top:5%;
+    border:1px solid #fff;
+    width:60px;
+    height:60px;
+    border-radius: 50%;
+    opacity: 1;
+    animation:1s circleanime forwards;
+}
+
+@keyframes circleanime{
+    0%{transform:scale(0);}
+    100%{transform: scale(5);opacity:0;}
+}
+
+/* .btnripple::after{
+    content:'';
+    position: absolute;
+    top:30%;
+    right:-20px;
+    width:5px;
+    height:5px;
+    /* border-top:1px solid #000;
+    border-right:1px solid #000;
+    transform: rotate(45deg); */
+/* }  */
+
+.btnripple1::after{
+    content:'';
+    opacity: 1;
+    animation:1s circleanime forwards;
+}
+
+.btnripple {
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+    color: #333;
+    outline: none;
+}
+
+.btnripple:hover::before {
+    content: '';
+    /* 絶対配置で波形の位置を決める */
+    position: absolute;
+    left: -3%;
+    top: 10%;
+    border: 1px solid #fff;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    opacity: 1;
+    animation: 1s circleanime2 forwards;
+}
+
+@keyframes circleanime2 {
+    0% {
+        transform: scale(0);
+    }
+    100% {
+        transform: scale(3);
+        opacity: 0;
+    }
+}
+
+.btnripple::after {
+    content: '';
+    opacity: 1;
+    animation: 1s circleanime forwards;
+}
+

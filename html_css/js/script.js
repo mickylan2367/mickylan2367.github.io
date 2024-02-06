@@ -57,9 +57,9 @@ if(windowwidth > 768){
 $('#slider').vegas({
     overlay:true, //画面の網線やドットのオーバーレイパターン画像を指定
     transition:'blur', // 切り替わりのアニメーション
-    transitionDuration:20000, //切り替わりのアニメーション時間をミリ秒単位で指定
+    transitionDuration:2000, //切り替わりのアニメーション時間をミリ秒単位で指定
     delay:10000, // スライド間の遅延時間をミリ秒単位で指定
-    animationDuration:20000,
+    animationDuration:90000,
     animation:'kenburns',
     slides:responsiveImage1,
 });

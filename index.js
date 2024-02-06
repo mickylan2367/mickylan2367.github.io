@@ -63,18 +63,44 @@ var windowwidth = window.innerWidth || document.documentElement.clientWidth || 0
 var responsiveImage6;
 
 if(windowwidth > 768){
+    var responsiveImage1 = [
+        {src: 'homePicture/camellia.jpg'},
+        {src: 'homePicture/stars.jpg'},
+        {src: 'homePicture/rose.jpg'}
+    ];
+
     var responsiveImage6 = [
         {src: 'html_css/pics/universe.webp'},
         {src: 'html_css/pics/sea.webp'},
         {src: 'html_css/pics/nasa.webp'}
     ];
 }else{
+
+    var responsiveImage1 = [
+        {src:'homePicture/camellia.jpg'},
+        {src:'homePicture/rose.jpg'},
+        {src:'homePicture/stars.jpg'}
+    ];
+
     var responsiveImage6 = [
         {src: 'html_css/pics/good.gif'},
         {src: 'html_css/pics/love.gif'},
         {src: 'html_css/pics/love2.gif'}
     ];
 }
+
+// Vegas全体の設定
+$('#slider').vegas({
+    overlay:true, //画面の網線やドットのオーバーレイパターン画像を指定
+    transition:'blur', // 切り替わりのアニメーション
+    transitionDuration:20000, //切り替わりのアニメーション時間をミリ秒単位で指定
+    delay:10000, // スライド間の遅延時間をミリ秒単位で指定
+    animationDuration:20000,
+    animation:'kenburns',
+    slides:responsiveImage1,
+});
+
+
 // Vegas全体の設定
 $('#slider6').vegas({
     overlay:true,/*overlayの種類はtrue */
@@ -86,9 +112,44 @@ $('#slider6').vegas({
     slides:responsiveImage6,
 });
 
+// ページ内リンク
+$('#page-link a[href^="."]').click(function(){
+    var elmHash =  $(this).attr('href');
+    var pos = $(elmHash).offset().top; /*idの上部の距離を取得*/
+    $('body, html').animate({scrollTop:pos},500); /*取得した位置にスクロール　500が大きいほどゆっくり*/
+    return false;
+});
+
+$('.finish').click(function(){
+    $('body, html').animate({
+        scrollTop:0
+    }, 500);
+    return false;
+});
 
 // 読みやすいように幅を調整
 if(windowwidth>1200){
+
+    $('.enterprise_logo').css({
+        'top':'8px',
+        'right':'2%' 
+    });
+
+    $('.enterprise_logo li img').css({
+        'width':'30px'
+    });
+
+    $('.enterprise_logo li').css({
+        'width':'30px',
+        'margin-left':'8px',
+        'margin-right':'8px'
+    });
+    
+    $('#page-link li').css({
+        'margin-left':'11%',
+        'margin-right':'11%',
+        'font-size': '30px'
+    });
     
     $('#author_caption').css({
         'width':'62%'
@@ -118,6 +179,15 @@ if(windowwidth>1200){
         'margin-right':'40%',
     });
 
+    $('.icon p').css({
+        'font-size':'xx-small'
+    })
+
+    $('.icon img').css({
+        'width':'80%',
+        'height':'200px'
+    })
+
     $('.caption1').css({
         'font-size':'xx-small'
     });
@@ -125,6 +195,32 @@ if(windowwidth>1200){
 
 }else{
 
+    $('.top .goodview').css({
+        'top':'35%',
+        'left':'0%'
+    });
+
+    $('.enterprise_logo').css({
+        'top':'2vh',
+        'right':'2%'
+    });
+
+    $('.enterprise_logo li').css({
+        'width':'30px',
+        'margin-left':'3vw',
+        'margin-right':'3vw'
+    });
+
+    $('.enterprise_logo li img').css({
+        'width':'50px'
+    });
+
+    $('#page-link li').css({
+        'margin-left':'8%',
+        'margin-right':'8%',
+        'font-size': '40px'
+    });
+    
     $('.slider li').css({
         'margin-right':'100px',
         'margin-left':'100px',
@@ -182,12 +278,17 @@ if(windowwidth>1200){
     });
 
     $('.icon').css({
-        'margin-left':'30%',
-        'margin-right':'30%',
+        'margin-left':'35%',
+        'margin-right':'35%',
         'padding-top':'5px'
     });
 
     $('.caption1').css({
         'font-size':'xx-small'
     });
+
+    $('.icon img').css({
+        'width':'50%',
+        'height':'200px'
+    })
 };

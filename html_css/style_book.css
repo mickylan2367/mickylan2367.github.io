@@ -461,7 +461,7 @@ img{
 #slider{
     width:100%;
     /* スライダー全体の縦横を画面の高さいっぱい(100vh)にする */
-    height:100vh;
+    height:120vh;
     margin-top: 10px;
     margin-bottom: 0px;
     margin-left: 0;
