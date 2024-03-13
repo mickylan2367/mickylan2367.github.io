@@ -1,81 +1,152 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
     <meta charset="UTF-8">
     <meta name="javascriptの練習" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.css">
-    <link rel="stylesheet" href="style_btn.css"> 
-    <link rel="stylesheet" href="style_move.css"> 
+    <link rel="stylesheet" href="style_btn.css">
+    <link rel="stylesheet" href="style_move.css">
+    <link rel="stylesheet" href="style_wave.css">
+    <link rel="stylesheet" href="style_scroll.css">
     <style>
-    h1{
-        text-align:center; 
-        font-size:30px; color:#A9533C; 
-        border-bottom:solid 5px #931E56;
-        padding:10px;
-        padding-top: 20px;
-        margin: 0px;
-    }
+        h1 {
+            text-align: center;
+            font-size: 30px;
+            color: #A9533C;
+            border-bottom: solid 5px #931E56;
+            padding: 10px;
+            padding-top: 20px;
+            margin: 0px;
+        }
 
-    .h2-title{
-        text-align:left;
-        font-size:25px;
-        border-bottom:solid 3px #931E56;
-        margin-right:19%;
-        margin-left:0px;
-        margin-top: 20px;
-        margin-bottom: 0;
-        padding-left:30px;
-        padding-top:0;
-        padding-bottom: 0;
-        padding-right: 0;
-    }
+        .h2-title {
+            text-align: left;
+            font-size: 25px;
+            border-bottom: solid 3px #931E56;
+            margin-right: 19%;
+            margin-left: 0px;
+            margin-top: 20px;
+            margin-bottom: 0;
+            padding-left: 30px;
+            padding-top: 0;
+            padding-bottom: 0;
+            padding-right: 0;
+        }
 
-    body{
-        margin: 0;
-        background:rgba(237, 187, 207, 0.4);
-        background-size: cover;
-    }
+        body {
+            margin: 0;
+            background: rgba(237, 187, 207, 0.4);
+            background-size: cover;
+        }
     </style>
 
     <div id="splash3">
         <div id="splash-logo3">
-            <img src="../logo3.jpg" class="fadeUp3">
+            <img src="../source/logo/logo3.jpg" class="fadeUp3">
             <!-- Now Loading... -->
         </div>
     </div>
 </head>
+
 <body>
 
     <div id="container">
-    <div class="openbtn">
-        <span></span>
-        <span></span>
-        <span></span>
-    </div>
-
-    <nav id="g-nav">
-        <div id="g-nav-list">
-            <ul>
-                <li><a href="../index.html">ホームに戻る</a></li>
-                <li><a href="coding_index.html">コーディングに戻る</a></li>
-            </ul>
+        <div class="openbtn">
+            <span></span>
+            <span></span>
+            <span></span>
         </div>
-    </nav>
-    <div class="circle-bg">
+
+        <nav id="g-nav">
+            <div id="g-nav-list">
+                <ul>
+                    <li><a href="../index.html">ホームに戻る</a></li>
+                    <li><a href="coding_index.html">コーディングに戻る</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="circle-bg">
+        </div>
+
+        <div class="wave" style="top:20vh">
+            <canvas id="waveCanvas"></canvas>
+        </div>
+        <div class="wave" style="top:40vh">
+            <canvas id="waveCanvas2"></canvas>
+        </div>
+        <div class="wave" style="top:60px">
+            <canvas id="waveCanvas3"></canvas>
+        </div>
+        <!--container-->
+
+        <section id="box1" class="box" data-section-name="About">
+            <h2>About</h2>
+            <!--/box-->
+        </section>
+
+        <section id="box2" class="box" data-section-name="Service">
+            <h2>Service</h2>
+            <!--/box-->
+        </section>
+
+        <section id="box3" class="box" data-section-name="Access">
+            <h2>Access</h2>
+            <!--/box-->
+        </section>
+
+        <section id="box4" class="box" data-section-name="Contact">
+            <h2>Contact</h2>
+            <!--/box-->
+        </section>
+        <section class="fixed">
+            <h2>Area 1</h2>
+            <p>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
+            </p>
+            <p>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
+            </p>
+            <!--/area1-->
+        </section>
+        <section class="fixed">
+            <h2>Area 2</h2>
+            <!--/area2-->
+        </section>
+        <section class="fixed">
+            <h2>Area 3</h2>
+            <p>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
+            </p>
+            <p>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
+            </p>
+            <p>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
+            </p>
+            <p>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
+            </p>
+            <p>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
+            </p>
+
+            <!--/area3-->
+        </section>
+        <section class="fixed">
+            <h2>Area 4</h2>
+            <!--/area4-->
+        </section>
+        <section class="fixed">
+            <h2>Area 5</h2>
+
+            <p>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
+            </p>
+            <!--/area5-->
+        </section>
     </div>
-    
-    <h1>画面遷移の動き</h1>
 
-    <!-- <h2 class="h2-title type1"><a href="move1.html" style="text-decoration: none;">背景色が伸びる（上から下）</a></h2> -->
-    <!-- <h2 class="h2-title"><a href="move2.html" style="text-decoration: none;">背景色が伸びる（下から上）</a></h2> -->
-
-    <h2 class="h2-title type1">背景色が伸びる（上から下）</h2> <!--クリックしたときにローディング画面が映るようにする-->
-    
-    <!--container--> </div>
-
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/scrollify/1.0.21/jquery.scrollify.min.js"></script>
     <script src="js/script_btn.js"></script>
     <script src="js/script_move.js"></script>
+    <script src="js/wave1.js"></script>
+    <script src="js/scroll.js"></script>
 </body>
+
 </html>
