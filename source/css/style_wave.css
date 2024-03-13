@@ -1,0 +1,10 @@
+.wave {
+    position: relative;
+}
+
+.wave canvas {
+    position: absolute;
+    bottom: 200;
+    left: 0;
+    width: 100%;
+}

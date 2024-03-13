@@ -1,0 +1,177 @@
+@charset "utf-8";
+
+/*========= レイアウトのためのCSS ===============*/
+
+#header {
+    padding: 40px;
+    background: #666;
+    color: #fff;
+    text-align: center;
+}
+
+.box {
+    color: #fff;
+    padding: 40px;
+    display: flex;
+    height: 80vh;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+} 
+
+#box1 {
+    background:url(../homePicture/camellia.jpg);
+    background-size: cover;
+}
+
+#box2 {
+    background:url(../homePicture/rose.jpg);
+    background-size: cover;
+}
+
+#box3 {
+    background:url(../homePicture/stars.jpg);
+    background-size: cover;
+}
+
+#box4 {
+    background: #000;
+}
+
+#footer {
+    background: #333;
+    color: #fff;
+    padding: 40px;
+    text-align: center;
+}
+
+#footer a {
+    color: #fff;
+}
+
+/*========= ページネーションCSS ===============*/
+/* ページネーションとは、右のぽっちのこと */
+
+.pagination {
+    position: fixed;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1em;
+    z-index: 10;
+    list-style: none;
+}
+
+.pagination a {
+    display: block;
+    height: 20px;
+    margin-bottom: 5px;
+    color: #fff;
+    position: relative;
+    padding: 4px;
+}
+
+.pagination a.active:after {
+    box-shadow: inset 0 0 0 5px;
+}
+
+/*現在地表示のテキストの設定*/
+.pagination a .hover-text {
+    position: absolute;
+    right: 15px;
+    top: 0;
+    opacity: 0;
+    -webkit-transition: opacity 0.5s ease;
+    transition: opacity 0.5s ease;
+    padding-right: 15px;
+}
+
+.pagination a:hover .hover-text {
+    opacity: 1;
+}
+
+.pagination a:after {
+    -webkit-transition: box-shadow 0.5s ease;
+    transition: box-shadow 0.5s ease;
+    width: 10px;
+    height: 10px;
+    display: block;
+    border: 1px solid;
+    border-radius: 50%;
+    content: "";
+    position: absolute;
+    margin: auto;
+    top: 0;
+    right: 3px;
+    bottom: 0;
+}
+
+/*768px以下は現在地表示のテキストを非表示*/
+@media screen and (max-width:768px) {
+    .pagination a .hover-text {
+        display: none;
+    }
+}
+
+
+/*========= 紙芝居風レイアウトのためのCSS ===============*/
+
+section.fixed {
+    position: -webkit-sticky;
+    /*Safari*/
+    position: sticky;
+    top: 70px;
+    /*Header高さ分で止まるようにする*/
+    /*装飾のためのCSS*/
+    background: #fff;
+    padding: 100px 30px 170px 30px;
+    min-height: 100vh;
+}
+
+section.fixed:nth-of-type(2n) {
+    /*装飾のためのCSS*/
+    color: #fff;
+    text-align: center;
+    padding: 300px 30px;
+    min-height: auto;
+}
+
+section.fixed:last-of-type {
+    padding: 170px 30px 100px 30px;
+    /*最後のセクションだけ止まらないため、エリア内の情報が少ない時は、HEADER分の高さをpadding-topに追加して上部が見えるようにする*/
+}
+
+section.fixed:nth-of-type(2) {
+    background: url("../../homePicture/rose.jpg") no-repeat center;
+    background-size: cover;
+}
+
+section.fixed:nth-of-type(4) {
+    background: url("../../homePicture/stars.jpg") no-repeat center;
+    background-size: cover;
+}
+
+
+/*＝＝＝＝＝＝＝＝＝＝＝タブレット以下の見え方＝＝＝＝＝＝＝＝＝＝＝＝＝*/
+
+@media screen and (max-width:768px) {
+
+    section.fixed,
+    section.fixed:last-of-type {
+        position: relative !important;
+        /*sticky解除*/
+        top: 0;
+        /*70px⇒0pxに戻す*/
+        min-height: auto;
+        padding: 30px;
+    }
+
+    section.fixed:first-of-type {
+        padding: 100px 30px 30px 30px;
+        /*最初の要素は上部にHeaderの高さ以上の余白をとる*/
+    }
+
+    section.fixed:nth-of-type(2n) {
+        padding: 100px 30px;
+    }
+}

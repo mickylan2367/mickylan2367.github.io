@@ -1,0 +1,98 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Cherry+Swash&display=swap');
+.h3-title{
+    font-size:30px;
+    font-weight:600;
+    color:#931E56;
+    font-family: 'Cherry Swash', cursive;
+    margin-top:0;
+    margin-bottom:-3px;
+    margin-right: 40%;
+    margin-left: 40%;
+    border-bottom: solid 6px #315F66;
+    position: relative;
+}
+
+
+.h3-title:after {
+    position: absolute;
+    content: " ";
+    display: block;
+    border-bottom: solid 6px #931E56;
+    /* bottom: -3px; */
+    width: 30%;
+  }
+
+#year{
+    font-size: x-large;
+    font-weight:400
+}
+
+/*タイムライン全体の設定*/
+.timeline {
+    /* max-width: 50%; */
+    /* display: inline-block; */
+    width: 55%;
+    margin: 50px auto;
+    padding: 0 30px;
+}
+
+.timeline li {
+    /*線の起点とするためrelativeを設定*/
+    position: relative;
+    list-style: none;
+    padding: 0 0 20px 0;
+}
+
+.timeline dl {
+    margin: 0 0 20px 3em;
+}
+
+.timeline dd strong {
+    display: block;
+    padding: 10px 0;
+}
+
+/*絶対配置で線を設定*/
+.border-line {
+    /*線の位置*/
+    position: absolute;
+    left: 0.8em;
+    top: 0;
+    width: 5px;
+    /*線の太さ*/
+    height: 0;
+    /*はじめは高さを0に*/
+    background: #931E56;
+}
+
+/*タイムラインの見出し横の丸の位置と形状*/
+.timeline li::after {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: 0;
+    width: 30px;
+    height: 30px;
+    background: #931E56;
+    border-radius: 50%;
+}
+
+
+#timeline-design-tau{
+    background-color:rgba(165, 201, 195, 0.3); /*#88 神秘のオーロラ オーロラグリーン*/
+    padding:2% 3%;
+    border-radius: 20px;
+}
+
+#timeline-design-sag{
+    background-color:rgba(211, 222, 241, 0.3);/*#63 ビジネスウェア　シャツブルー*/
+    padding:2% 3%;
+    border-radius: 20px;
+}
+
+#timeline-design-aqu{
+    background-color:rgba(190, 184, 201, 0.3);/*#63 ビジネスウェア　シルバー*/;/**/
+    padding:2% 3%;
+    border-radius: 20px;
+}

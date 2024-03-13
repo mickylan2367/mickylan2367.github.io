@@ -1,0 +1,191 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Cherry+Swash&display=swap');
+#splash{
+    position:fixed;
+    width:100%;
+    height:100%;
+    /* background:radial-gradient(rgba(217, 212, 234, 1), #931E56); */
+    background:radial-gradient(rgba(255, 199, 120, 0.5), rgba(241, 63, 121, 0.5));
+    z-index:9999999;
+    text-align:center;
+    /* color:#fff; */
+}
+
+#splash-logo{
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    font-size: 60px;
+    font-family: 'Cherry Swash', cursive;
+    color:#931E56;
+    background:transparent;
+}
+
+#splash2{
+    position:fixed;
+    width:100%;
+    height:100%;
+    /* background:radial-gradient(rgba(217, 212, 234, 1), #931E56); */
+    background:rgba(64, 4, 3, 1);
+    z-index:9999999;
+    text-align:center;
+    /* color:#fff; */
+}
+
+#splash-logo2{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+}
+
+#splash-logo2 img{
+    width:500px;
+}
+
+.fadeUp{
+    animation-name: fadeUpAnime;
+    animation-duration:0.5s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+@keyframes fadeUpAnime{
+    from{
+        opacity: 0;
+        /* transform: rotateZ(180deg); */
+        transform: rotate3d(1, 1, 0, 90deg);
+    }
+
+    to{
+        opacity: 1;
+        /* transform:rotateZ(-180deg) */
+        transform: rotate3d(1, 1, 0, 359deg);
+    }
+}
+
+.splashbg{
+    display: none;
+}
+
+/* bodyにappearクラスが付いたら出現 */
+body.appear .splashbg{
+    display: block;
+    content: "";
+    position: fixed;
+    z-index: 999;
+    width:100%;
+    height:100vh;
+    top:0;
+    left:0;
+    transform: scaleY(0);
+    background-color: #333;
+    animation-name:PageAnime;
+    animation-duration: 5s;
+    animation-timing-function:ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+@keyframes PageAnime{
+    0%{
+        transform-origin: top;
+        transform:scaleY(0);
+    }
+    50%{
+        transform-origin: top;
+        transform: scaleY(1);
+    }
+    50.001%{
+        transform-origin: bottom;
+    }
+    100%{
+        transform-origin:bottom;
+        transform:scaleY(0);
+    }
+}
+
+#container{
+    opacity:0;
+}
+
+body.appear #container{
+    animation-name: PageAnimeAppear;
+    animation-duration: 1s;
+    animation-delay: 0.8s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+@keyframes PageAnimeAppear{
+    0%{opacity:0;}
+    100%{opacity:1;}
+}
+
+
+
+/* ぐるぐるする */
+#splash3{
+    position:fixed;
+    width:100%;
+    height:100%;
+    /* background:radial-gradient(rgba(217, 212, 234, 1), #931E56); */
+    background:rgba(64, 4, 3, 1);
+    z-index:9999999;
+    text-align:center;
+    /* color:#fff; */
+}
+
+#splash-logo3{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+}
+
+#splash-logo3 img{
+    width:50vw;
+}
+
+.fadeUp3{
+    animation-name: fadeUpAnime3;
+    animation-duration:0.5s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+@keyframes fadeUpAnime3{
+    0%{
+        opacity: 0;
+        /* transform: rotateZ(180deg); */
+        transform: rotate3d(1, 1, 0, 0deg);
+    }
+
+    25%{
+        opacity: 1;
+        /* transform:rotateZ(-180deg) */
+        transform: rotate3d(1, 1, 0, 150deg);
+    }
+
+    50%{
+        opacity: 1;
+        /* transform: rotateZ(180deg); */
+        transform: rotate3d(1, 1, 0, 210deg);
+    }
+
+    75%{
+        opacity: 1;
+        /* transform:rotateZ(-180deg) */
+        transform: rotate3d(1, 1, 0, 270deg);
+    }
+
+    100%{
+        opacity: 1;
+        /* transform: rotateZ(180deg); */
+        transform: rotate3d(1, 1, 0, 359deg);
+    }
+}
+
+.splashbg3{
+    display: none;
+}

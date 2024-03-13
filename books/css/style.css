@@ -1,0 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Cherry+Swash&display=swap');
+h2{
+    font-size: 100px;
+    font-weight: 10px;
+    font-family: 'Cherry Swash', cursive;
+    position: relative;
+    top:-3vh;
+    left:0vw;
+    color:#fff;
+}

@@ -1,50 +1,92 @@
 <!DOCTYPE html>
 <html>
 <style>
-body{
-    background-image: url(pics/julia.png);
-    background-color:#F5E6DD;
-}
+    body {
+        background-image: url(pics/julia.png);
+        background-color: #F5E6DD;
+        margin: 0;
+        background-size: cover;
+    }
 
-h1{
- text-align:center; 
- font-size:30px; color:#A9533C; 
- border-bottom:solid 5px #931E56;
-}
+    h1 {
+        text-align: center;
+        font-size: 30px;
+        color: #A9533C;
+        border-bottom: solid 5px #931E56;
+        margin: 0;
+        padding-top: 20px;
+    }
 </style>
-<head>
-<meta charset="UTF-8">
-<title>魔女の部屋</title>
 
-<link rel="stylesheet" href="../style.css">
+<head>
+    <meta charset="UTF-8">
+    <title>魔女の部屋</title>
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.css">
+    <!-- <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/vegas/2.4.4/vegas.min.css"> -->
+    <link rel="stylesheet" href="css/style_move.css">
+    <link rel="stylesheet" href="css/style_btn.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <div id="splash">
+        <div id="splash-logo">Now Loading...</div>
+    </div>
 </head>
 
 <body>
-    <!-- 
-        chatgptに作成してもらった!
-        このコードは、生年月日を入力し、ボタンをクリックすることで
-        ホロスコープ情報を表示できる基本的なHTMLページを提供します。
-        実際の占星術情報を表示するには、JavaScriptのshowHoroscope関数内で
-        計算とテキスト表示のロジックを追加する必要があります。
-        また、本格的な占星術情報を提供するために、専門家の協力を得ることが重要です。 
-    -->
-    <h1>魔女の部屋</h1>
-    <p align="center">
-        <a href="sabian.html">
-        <img src="pics/mandelprot.png" width="500px">
-        </a>
-    </p>
-    
-    <p align="center">
-        <a href="horoscope.html">
-        <img src="pics/julia3.png" width="500px">
-        </a>
-    </p>
 
-    <p align="center">
-        <a href="degree.html">
-        <img src="pics/watch.png" width="500px">
-        </a>
-    </p>
+    <div id="container">
+        <div class="openbtn">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <nav id="g-nav">
+            <div id="g-nav-list">
+                <ul>
+                    <li><a href="../../index.html">ホームに戻る</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="circle-bg"></div>
+
+        <h1>魔女の部屋</h1>
+
+        <ul class="image">
+            <li>
+                <a href="sabian.html">
+                    <p>ZodiacSign</p>
+                    <img src="pics/julia.png">
+                </a>
+            </li>
+            <li>
+                <a href="horoscope.html">
+                    <p>Horoscope</p>
+                    <img src="pics/mandelprot.png">
+                </a>
+            </li>
+            <li>
+                <a href="degree.html">
+                    <p>SabianSymbol</p>
+                    <img src="pics/watch.png">
+                </a>
+            </li>
+        </ul>
+        <!-- <ul class="index">
+            <li><p>ZodiacSign</p></li>
+            <li><p>Horoscope</p></li>
+            <li><p>SabianSymbol</p></li>
+        </ul> -->
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/vegas/2.4.4/vegas.min.js"></script> -->
+    <script src="js/script_btn.js"></script>
+    <!-- <script src="js/script_move.js"></script> -->
+    <!-- <script src="js/script.js"></script> -->
 </body>
+
 </html>

@@ -1,0 +1,71 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Cherry+Swash&display=swap');
+/* ここからデザインに使っているもの */
+.image{
+    display: flex;
+    margin:0 0;
+    padding: 0;
+    background-color: transparent;
+    /* background: transparent; */
+}
+
+.image li{
+    display: inline-block;
+    margin:0;
+    padding:0;
+}
+
+.image li img{
+    width:33.3vw;
+    height:70vh;
+    margin: 0;
+    padding:0;
+}
+
+.image li p{
+    text-align: center;
+    font-size: xx-large;
+    color: aliceblue;
+    font-family: 'Cherry Swash', cursive;
+}
+
+.image li:nth-of-type(1) p{
+    position:absolute;
+    top:50%;
+    left:1%;
+    font-size:40px;
+}
+
+.image li:nth-of-type(2) p{
+    position:absolute;
+    top: 60%;
+    left:42%;
+    font-size: 55px;
+}
+
+.image li:nth-of-type(3) p{
+    position:absolute;
+    top:8%;
+    left:76%;
+    font-size: 40px;
+}
+
+
+/* .index{
+    position:absolute;
+    display: flex;
+    top:60vh;
+    left:0px;
+}
+
+.index li{
+    display: inline-block;
+    max-width: 300px;
+    margin-left: 19%;
+    margin-right: 19%;
+}
+
+.index li p{
+    font-size: xx-large;
+    color: aliceblue;
+} */
