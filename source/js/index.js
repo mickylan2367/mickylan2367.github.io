@@ -365,13 +365,13 @@ if(windowwidth>1200){
     $('.timeline #timeline-design-tau').css({
         'font-size':'x-large',
         'padding':'10% 5%',
-        'border': 'solid #005D4D'
+        // 'border': 'solid #005D4D'
     })
 
     $('.timeline #timeline-design-sag').css({
         'font-size':'x-large',
         'padding':'10% 5%',
-        'border': 'solid #AFB4DB'
+        // 'border': 'solid #AFB4DB'
     })
 
     $('.timeline #timeline-design-aqu').css({
@@ -379,6 +379,6 @@ if(windowwidth>1200){
         // 上　右　下　左
         // 'padding':'10% 20% 10% 5%',
         'padding':'10% 5%',
-        'border': 'solid #B455A0'
+        // 'border': 'solid #B455A0'
     })
 };
