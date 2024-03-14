@@ -136,7 +136,7 @@ if(windowwidth>1200){
     });
 
     $('.top .goodview p').css({
-        'color': '#931E56'
+        'color': '#fef9fb'
     });
 
     $('.enterprise_logo').css({
@@ -162,8 +162,8 @@ if(windowwidth>1200){
     });
 
     $('.btnripple1').css({
-        'color': '#931E56'
-    })
+        'color': '#f7f6f5'
+    });
     
     $('#author_caption').css({
         'width':'62%'
@@ -352,4 +352,33 @@ if(windowwidth>1200){
         'margin-right':'30%',
         'margin-left':'30%'
     });
+
+
+    $('.timeline #year').css({/*img要素に指定してもいいし、いっそcaptionで幅広げるのもあり？*/
+        'width': '80%',
+        'margin': '0 auto',
+        'padding': '20px 30px',
+        'font-size':'xx-large'
+    });
+
+
+    $('.timeline #timeline-design-tau').css({
+        'font-size':'x-large',
+        'padding':'10% 5%',
+        'border': 'solid #005D4D'
+    })
+
+    $('.timeline #timeline-design-sag').css({
+        'font-size':'x-large',
+        'padding':'10% 5%',
+        'border': 'solid #AFB4DB'
+    })
+
+    $('.timeline #timeline-design-aqu').css({
+        'font-size':'x-large',
+        // 上　右　下　左
+        // 'padding':'10% 20% 10% 5%',
+        'padding':'10% 5%',
+        'border': 'solid #B455A0'
+    })
 };
