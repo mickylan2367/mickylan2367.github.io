@@ -22,6 +22,7 @@ body{
 <link rel="stylesheet" type="text/css" href="source/css/style_index2.css">
 <link rel="stylesheet" type="text/css" href="source/css/style_btna.css">
 <link rel="stylesheet" type="text/css" href="source/css/style_tl.css">
+<link rel="stylesheet" type="text/css" href="source/css/style_map.css">
 <!-- <link rel="stylesheet" href="styleSheet.css"> -->
 
 <div id="splash">
@@ -219,7 +220,7 @@ body{
         </li>
     </ul> -->
 
-    <h3 class="h3-title">Timeline</h2>
+    <h3 class="h3-title">Timeline</h3>
     <ul class="timeline">
         <li><!--線が伸びる基準となるHTML。liを基準として、spanに指定された線を伸ばします。-->
             <dl>
@@ -338,6 +339,12 @@ body{
                     意外とプログラミングが面白いかもしれない..と思い始めるようになる。<br>
                     プログラミング初心者でも、ちゃんと楽しめるカリキュラムになってます（すごい）。未来大での生活はContentsのDiaryを見てね!<br>
                     AIに興味を持ち始める。<br>
+
+                    <!-- <strong>後輩への助言?(老婆心)</strong> -->
+                    <!-- プログラミング完全に初心者でいろいろ不安なら、Processingの教科書を（ブロック崩しゲーム完成まで）授業前に全部やっておけば、プログラミングが楽しくなると思います。
+                    アレンジする余裕が生まれるからです。
+                    授業で焦るとなんでも辛いので、辛くなる前に先に自分で対策を打つと良いと思います。
+                    石橋は叩き壊して自分で作ってわたる方が多分楽しい..です（持論）。 -->
                     <p></p>
                     2022- 複雑系コース<br>
                     2023- 長期インターンシップ参加へ
@@ -345,6 +352,17 @@ body{
             </dl>
             <span class="border-line"></span>
         </li>
+
+        <li>
+            <dl>
+                <dt id="year">Now...</dt>
+                <dd id=""timeline-design-aqu>
+                    <a class="twitter-timeline" data-height="400" data-lang="ja" href="https://twitter.com/BfjXCFdKaevFIXK?t=twsrc%5Etfw">Tweets by XDevelopers</a>
+                </dd>
+            </dl>
+            <span class="border-line"></span>
+        </li>
+
         <li>
             <dl>
                 <dt id="year">2026-　再び射手座へ。</dt>
@@ -356,12 +374,17 @@ body{
                 </dd>
             </dl>
         </li>
+        <!-- 今後の星座全部上げてくのは流石に個人情報(~_~;) -->
     </ul>
 
-    <div style="margin-right: 30%;margin-left: 30%;margin-top: 0;">
+    <!-- <div style="margin-right: 30%;margin-left: 30%;margin-top: 0;margin-bottom:10%">
         <h3 class="h3-title" style="margin-bottom:10px">Now...</h3>
         <a class="twitter-timeline" data-lang="ja" data-width="500" data-height="600" data-theme="light" data-tweet-limit="4" href="https://twitter.com/BfjXCFdKaevFIXK?t=twsrc%5Etfw">Tweets by XDevelopers</a>
-    </div>
+    </div> -->
+
+    <h3 class="h3-title">Map</h3>
+    <div id="my-map"></div>
+    
 </div>
 
 
@@ -418,6 +441,9 @@ body{
     <p style="text-align: center;font-size: x-large;"><a href="#">ページトップへ</a></p>
 </div>
 
+
+<!-- twitter -->
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 <!-- jqueryはJavaScripのライブ蟻 -->
 <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
 <!-- プラグインのJavaScript -->
@@ -425,11 +451,85 @@ body{
 <script src="https://rawgit.com/kimmobrunfeldt/progressbar.js/master/dist/progressbar.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/vegas/2.4.4/vegas.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/scrollify/1.0.21/jquery.scrollify.min.js"></script>
-<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+<!-- 日本地図 -->
+<script type="text/javascript" src="https://unpkg.com/japan-map-js@1.0.1/dist/jpmap.min.js"></script>
+<script type="text/javascript" src="dist/jpmap.min.js"></script>
+
+<!-- 自作javascript -->
 <script src="source/js/index.js"></script>
 <script src="source/js/pics.js"></script>
 <!-- <script src="source/js/audio.js"></script> -->
 <script src="source/js/timeline.js"></script>
 
+<script>
+    // 日本地図の設定
+
+    var areaLinks = {
+        1:"https://www.pref.hokkaido.lg.jp/",　//リンク先URL
+        2:"https://www.pref.aomori.lg.jp/",
+        3:"https://www.pref.iwate.lg.jp/",
+        4:"https://www.pref.miyagi.lg.jp/",
+    };
+    
+    var d = new jpmap.japanMap(document.getElementById("my-map"), {
+        areas: [
+            {code : 1, name: "北海道", color: "#7f7eda", hoverColor: "#b3b2ee"},
+            {code : 2, name: "青森", color: "#759ef4", hoverColor: "#98b9ff"},
+            {code : 3, name: "岩手", color: "#759ef4", hoverColor: "#98b9ff"},
+            {code : 4, name: "宮城", color: "#759ef4", hoverColor: "#98b9ff"},
+            {code : 5, name: "秋田", color: "#759ef4", hoverColor: "#98b9ff"},
+            {code : 6, name: "山形", color: "#759ef4", hoverColor: "#98b9ff"},
+            {code : 7, name: "福島", color: "#759ef4", hoverColor: "#98b9ff"},
+            {code : 8, name: "茨城", color: "#7ecfea", hoverColor: "#b7e5f4"},
+            {code : 9, name: "栃木", color: "#7ecfea", hoverColor: "#b7e5f4"},
+            {code : 10, name: "群馬", color: "#7ecfea", hoverColor: "#b7e5f4"},
+            {code : 11, name: "埼玉", color: "#7ecfea", hoverColor: "#b7e5f4"},
+            {code : 12, name: "千葉", color: "#7ecfea", hoverColor: "#b7e5f4"},
+            {code : 13, name: "東京", color: "#7ecfea", hoverColor: "#b7e5f4"},
+            {code : 14, name: "神奈川", color: "#7ecfea", hoverColor: "#b7e5f4"},
+            {code : 15, name: "新潟", color: "#7cdc92", hoverColor: "#aceebb"},
+            {code : 16, name: "富山", color: "#7cdc92", hoverColor: "#aceebb"},
+            {code : 17, name: "石川", color: "#7cdc92", hoverColor: "#aceebb"},
+            {code : 18, name: "福井", color: "#7cdc92", hoverColor: "#aceebb"},
+            {code : 19, name: "山梨", color: "#7cdc92", hoverColor: "#aceebb"},
+            {code : 20, name: "長野", color: "#7cdc92", hoverColor: "#aceebb"},
+            {code : 21, name: "岐阜", color: "#7cdc92", hoverColor: "#aceebb"},
+            {code : 22, name: "静岡", color: "#7cdc92", hoverColor: "#aceebb"},
+            {code : 23, name: "愛知", color: "#7cdc92", hoverColor: "#aceebb"},
+            {code : 24, name: "三重", color: "#ffe966", hoverColor: "#fff19c"},
+            {code : 25, name: "滋賀", color: "#ffe966", hoverColor: "#fff19c"},
+            {code : 26, name: "京都", color: "#ffe966", hoverColor: "#fff19c"},
+            {code : 27, name: "大阪", color: "#ffe966", hoverColor: "#fff19c"},
+            {code : 28, name: "兵庫", color: "#ffe966", hoverColor: "#fff19c"},
+            {code : 29, name: "奈良", color: "#ffe966", hoverColor: "#fff19c"},
+            {code : 30, name: "和歌山", color: "#ffe966", hoverColor: "#fff19c"},
+            {code : 31, name: "鳥取", color: "#ffcc66", hoverColor: "#ffe0a3"},
+            {code : 32, name: "島根", color: "#ffcc66", hoverColor: "#ffe0a3"},
+            {code : 33, name: "岡山", color: "#ffcc66", hoverColor: "#ffe0a3"},
+            {code : 34, name: "広島", color: "#ffcc66", hoverColor: "#ffe0a3"},
+            {code : 35, name: "山口", color: "#ffcc66", hoverColor: "#ffe0a3"},
+            {code : 36, name: "徳島", color: "#fb9466", hoverColor: "#ffbb9c"},
+            {code : 37, name: "香川", color: "#fb9466", hoverColor: "#ffbb9c"},
+            {code : 38, name: "愛媛", color: "#fb9466", hoverColor: "#ffbb9c"},
+            {code : 39, name: "高知", color: "#fb9466", hoverColor: "#ffbb9c"},
+            {code : 40, name: "福岡", color: "#ff9999", hoverColor: "#ffbdbd"},
+            {code : 41, name: "佐賀", color: "#ff9999", hoverColor: "#ffbdbd"},
+            {code : 42, name: "長崎", color: "#ff9999", hoverColor: "#ffbdbd"},
+            {code : 43, name: "熊本", color: "#ff9999", hoverColor: "#ffbdbd"},
+            {code : 44, name: "大分", color: "#ff9999", hoverColor: "#ffbdbd"},
+            {code : 45, name: "宮崎", color: "#ff9999", hoverColor: "#ffbdbd"},
+            {code : 46, name: "鹿児島", color: "#ff9999", hoverColor: "#ffbdbd"},
+            {code : 47, name: "沖縄", color: "#eb98ff", hoverColor: "#f5c9ff"},
+        ],
+        showsPrefectureName: true, //都道府県名を表示させる
+        width: 1000,　//横幅のサイズ
+        movesIslands: true, //沖縄地方が地図の左上の分離されたスペースに移動する
+        lang: 'en',
+        onSelect: function(data){
+            location.href = areaLinks[data.area.code];
+        }
+    });
+</script>
 </body>
 </html>

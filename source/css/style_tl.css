@@ -83,16 +83,19 @@
     background-color:rgba(165, 201, 195, 0.3); /*#88 神秘のオーロラ オーロラグリーン*/
     padding:2% 3%;
     border-radius: 20px;
+    border: solid #005D4D
 }
 
 #timeline-design-sag{
     background-color:rgba(211, 222, 241, 0.3);/*#63 ビジネスウェア　シャツブルー*/
     padding:2% 3%;
     border-radius: 20px;
+    border: solid #AFB4DB
 }
 
 #timeline-design-aqu{
     background-color:rgba(190, 184, 201, 0.3);/*#63 ビジネスウェア　シルバー*/;/**/
     padding:2% 3%;
     border-radius: 20px;
+    border: solid #B455A0
 }
