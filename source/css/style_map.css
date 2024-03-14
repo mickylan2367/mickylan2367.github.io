@@ -3,6 +3,7 @@
 
 #my-map{
     text-align: center;
+    background-size: cover;
     margin-bottom: 30px;
     margin-top: 30px;
 }

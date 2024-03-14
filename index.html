@@ -356,7 +356,7 @@ body{
         <li>
             <dl>
                 <dt id="year">Now...</dt>
-                <dd id=""timeline-design-aqu>
+                <dd id="timeline-design-aqu">
                     <a class="twitter-timeline" data-height="400" data-lang="ja" href="https://twitter.com/BfjXCFdKaevFIXK?t=twsrc%5Etfw">Tweets by XDevelopers</a>
                 </dd>
             </dl>
@@ -471,6 +471,13 @@ body{
         3:"https://www.pref.iwate.lg.jp/",
         4:"https://www.pref.miyagi.lg.jp/",
     };
+
+    var windowwidth = window.innerWidth || document.documentElement.clientWidth || 0;
+    if(windowwidth > 1200){
+        var mapwidth=1000
+    }else{
+        var mapwidth=800
+    }
     
     var d = new jpmap.japanMap(document.getElementById("my-map"), {
         areas: [
@@ -523,7 +530,8 @@ body{
             {code : 47, name: "沖縄", color: "#eb98ff", hoverColor: "#f5c9ff"},
         ],
         showsPrefectureName: true, //都道府県名を表示させる
-        width: 1000,　//横幅のサイズ
+        width: mapwidth,　//横幅のサイズ
+        // height:mapheight,
         movesIslands: true, //沖縄地方が地図の左上の分離されたスペースに移動する
         lang: 'en',
         onSelect: function(data){
