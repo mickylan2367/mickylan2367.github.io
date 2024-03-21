@@ -115,7 +115,8 @@ a{
 }
 
 #motto_aqua{
-  background: linear-gradient(-225deg, rgba(105, 234, 204, 0.5) 0%, rgba(234, 204, 248, 0.5) 48%, rgba(102, 84, 241, 0.5) 100%), url(stars/pics/watch.png);
+  /* background: linear-gradient(-225deg, rgba(105, 234, 204, 0.5) 0%, rgba(234, 204, 248, 0.5) 48%, rgba(102, 84, 241, 0.5) 100%), url(homePicture/konosuba.svg); */
+  /* background: url(homePicture/konosuba.svg); */
   border: solid 10px rgba(216,215,223,0.7);
   color:aliceblue;
   font-weight: 900;
@@ -339,8 +340,8 @@ a{
 
 
 
-/* 
-アクア様をハートに切り抜くコード。
+ 
+/* アクア様をハートに切り抜くコード。 */
 .mask {
   -webkit-clip-path: url(#svgPath);
   clip-path: url(#svgPath);
@@ -349,13 +350,13 @@ a{
   border-width: thick;
   border-radius:5px;
   border-color: aquamarine;
-  width:200px;
+  width:20%;
   height:auto;
 }
 .shape {
   height:0;
 } 
-*/
+
 /* どこで使ったのか分からないcss */
 #arthor{
  display:inline;
